@@ -38,4 +38,13 @@ export class ProdutoEditComponent implements OnInit {
       this.produto = resp
     })
   }
+
+  atualizar(){
+    this.produtoService.putProduto(this.produto).subscribe((resp: Produto)=> {
+      this.produto = resp
+      alert('Tema atualizado!')
+      this.router.navigate(['/tema'])
+  })
+
+  }
 }
