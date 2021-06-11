@@ -23,7 +23,7 @@ public class Usuario {
 	private long id;
 
 	@NotNull
-	private String nomeCompleto;
+	private String nome;
 	
 	@NotNull
 	private String email;
@@ -36,10 +36,8 @@ public class Usuario {
 	private String endereco;
 	
 	
-	private String telefoneFixo;
+	private String telefone;
 	
-
-	private String telefoneCelular;
 	
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("usuario")
@@ -67,13 +65,13 @@ public class Usuario {
 	}
 
 
-	public String getNomeCompleto() {
-		return nomeCompleto;
+	public String getNome() {
+		return nome;
 	}
 
 
-	public void setNomeCompleto(String nomeCompleto) {
-		this.nomeCompleto = nomeCompleto;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 
@@ -105,24 +103,14 @@ public class Usuario {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
+	
 
-
-	public String getTelefoneFixo() {
-		return telefoneFixo;
+	public String getTelefone() {
+		return telefone;
 	}
+	
 
-
-	public void setTelefoneFixo(String telefoneFixo) {
-		this.telefoneFixo = telefoneFixo;
-	}
-
-
-	public String getTelefoneCelular() {
-		return telefoneCelular;
-	}
-
-
-	public void setTelefoneCelular(String telefoneCelular) {
-		this.telefoneCelular = telefoneCelular;
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
 	}
 }
