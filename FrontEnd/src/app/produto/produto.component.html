@@ -1,18 +1,18 @@
-<div class="container-fluid">
+<div class="container-fluid d-flex justify-content-center mt-5">
 
     <!--Registro de Novo Produto-->
     <div class="row bg-secondary mb-5" class="div1">
         <div class="col-md-12 text-dark">
 
-            <a routerLink='/inicio' class="text-white text-left">
-                <i class="fa fa-angle-double-left" aria-hidden="true">Inicio</i>
+            <a routerLink='/home' class="text-white text-left">
+                <i class="fa fa-angle-double-left" aria-hidden="true">home</i>
             </a>
 
             <h1 class="fs-54 text-center"> Registro de novos produtos</h1>
             
 
             <div class="row  d-flex justify-content-center mt-5 mb-5">
-                <div class="col-md-3">
+                <div class="col-md-12">
                     <div class="form-group">
                         <input [(ngModel)] = 'produto.nome' type="text" class="form-control" id="nome" placeholder="Digite o nome do produto">
                     </div>
@@ -57,17 +57,55 @@
     </div>
 
     <!--Card de Produtos-->
-<div class="row mt-3 mb-5 d-flex justify-content-center">
-    <div class="col-md-3">
+    <div class="container-fluid">
+<div class="row d-flex justify-content-center">
+    <div class="col-md-4 mb-5 mt-5">
           <div class="card">
             <div class="card text-center" *ngFor='let item of listaProdutos'>
               <div class="card-body">
                 <img class="card-img-top" src="{{item.foto}}">
-                <h5 class="card-text">{{item.preco}}</h5>
+                <h5 class="card-text">{{item.preco}} R$</h5>
               </div>
+              <a class="justify-content-end">
+                <button class= "btn btn-info mr-3" [routerLink]="['/produto-edit',produto.id]">Editar</button>
+                <button class="btn btn-danger" [routerLink]="['/produto-delete',produto.id]">Apagar</button>
+            </a> 
           </div>
-        </div>   
+        </div>  
     </div>
+
+    <div class="col-md-4 mb-5 mt-5">
+        <div class="card">
+          <div class="card text-center" *ngFor='let item of listaProdutos'>
+            <div class="card-body">
+              <img class="card-img-top" src="{{item.foto}}">
+              <h5 class="card-text">{{item.preco}} R$</h5>
+              <a class="justify-content-end">
+                <button class= "btn btn-info mr-3" [routerLink]="['/produto-edit',produto.id]">Editar</button>
+                <button class="btn btn-danger" [routerLink]="['/produto-delete',produto.id]">Apagar</button>
+            </a> 
+            </div>
+        </div>
+      </div>   
+  </div>
+
+  <div class="col-md-4 mb-5 mt-5">
+    <div class="card">
+      <div class="card text-center" *ngFor='let item of listaProdutos'>
+        <div class="card-body">
+          <img class="card-img-top" src="{{item.foto}}">
+          <h5 class="card-text">{{item.preco}} R$</h5>
+          <a class="justify-content-end">
+            <button class= "btn btn-info mr-3" [routerLink]="['/produto-edit',produto.id]">Editar</button>
+            <button class="btn btn-danger" [routerLink]="['/produto-delete',produto.id]">Apagar</button>
+        </a> 
+        </div>
+    </div>
+  </div>   
+</div>
+
+    
+</div>
 </div>
 
    <!--/Card de Produtos-->
