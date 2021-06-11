@@ -10,6 +10,8 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
+import { VerProdutoComponent } from './ver-produto/ver-produto.component';
+import { VitrineComponent } from './vitrine/vitrine.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { HomeComponent } from './home/home.component';
     RodapeComponent,
     EntrarComponent,
     CadastrarComponent,
-    HomeComponent
+    HomeComponent,
+    VerProdutoComponent,
+    VitrineComponent
   ],
   imports: [
     BrowserModule,
