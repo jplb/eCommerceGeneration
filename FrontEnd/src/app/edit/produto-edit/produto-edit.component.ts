@@ -42,8 +42,8 @@ export class ProdutoEditComponent implements OnInit {
   atualizar(){
     this.produtoService.putProduto(this.produto).subscribe((resp: Produto)=> {
       this.produto = resp
-      alert('Tema atualizado!')
-      this.router.navigate(['/tema'])
+      alert('Cadastro atualizado!')
+      this.router.navigate(['/produto'])
   })
 
   }
