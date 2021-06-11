@@ -9,6 +9,7 @@ import { RodapeComponent } from './rodape/rodape.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { FormsModule } from '@angular/forms';
+import { ProdutoComponent } from './produto/produto.component';
 import { HomeComponent } from './home/home.component';
 
 @NgModule({
@@ -18,6 +19,7 @@ import { HomeComponent } from './home/home.component';
     RodapeComponent,
     EntrarComponent,
     CadastrarComponent,
+    ProdutoComponent,
     HomeComponent
   ],
   imports: [

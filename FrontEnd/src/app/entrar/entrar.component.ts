@@ -38,7 +38,7 @@ export class EntrarComponent implements OnInit {
       console.log(environment.foto)
 
 
-    this.router.navigate(['/inicio'])
+    this.router.navigate(['/produto'])
   }, erro =>{
     if(erro.status == 500){
       alert('Usuário e senha inválido')
