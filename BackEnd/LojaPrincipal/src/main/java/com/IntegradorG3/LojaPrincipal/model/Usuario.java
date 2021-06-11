@@ -35,8 +35,11 @@ public class Usuario {
 	@NotNull
 	private String endereco;
 	
-	
+	@NotNull
 	private String telefone;
+	
+	@NotNull
+	private String tipo;
 	
 	
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
