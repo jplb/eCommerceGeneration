@@ -37,7 +37,7 @@ public class Produto {
 	private String foto;
 	
 	@NotNull 
-	@Size(min = 3, max = 60)
+	@Size
 	private String tema;
 	
 	@NotNull
