@@ -17,13 +17,7 @@ const routes: Routes = [
 
 
 {path:'produto-edit/:id', component: ProdutoEditComponent},
-{path:'produto-delete/:id', component: ProdutoDeleteComponent},
-
-{path:'produto-edit/:tema', component: ProdutoEditComponent},
-{path:'produto-delete/:tema', component: ProdutoDeleteComponent},
-
-
-
+{path:'produto-delete/:id', component: ProdutoDeleteComponent}
 
 ];
 
