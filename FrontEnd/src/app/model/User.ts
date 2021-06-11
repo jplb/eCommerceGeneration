@@ -8,3 +8,4 @@ export class User {
     public telefoneCelular: string
     public endereco: string
 }
+
