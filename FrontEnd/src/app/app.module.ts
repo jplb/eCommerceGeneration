@@ -9,12 +9,8 @@ import { RodapeComponent } from './rodape/rodape.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { FormsModule } from '@angular/forms';
-<<<<<<< HEAD
 import { ProdutoComponent } from './produto/produto.component';
-
-=======
 import { HomeComponent } from './home/home.component';
->>>>>>> 50ec84bc4ded69cb14ce5475b2055fa2d37c6231
 
 @NgModule({
   declarations: [
@@ -23,11 +19,8 @@ import { HomeComponent } from './home/home.component';
     RodapeComponent,
     EntrarComponent,
     CadastrarComponent,
-<<<<<<< HEAD
-    ProdutoComponent
-=======
+    ProdutoComponent,
     HomeComponent
->>>>>>> 50ec84bc4ded69cb14ce5475b2055fa2d37c6231
   ],
   imports: [
     BrowserModule,
