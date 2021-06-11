@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Produto } from '../model/Produto';
 import { ProdutoService } from '../service/produto.service';
@@ -23,8 +23,10 @@ export class ProdutoComponent implements OnInit {
 
   ngOnInit() {
 
-
-     
+    if (environment.token =='') {
+      alert('Sua sessão expirou! Faça login novamente')
+      this.router.navigate(['/entrar'])
+     }
      this.findAllProdutos()
  }
 
@@ -43,6 +45,9 @@ export class ProdutoComponent implements OnInit {
   })
 
  }
+
+
+
 
   }
 

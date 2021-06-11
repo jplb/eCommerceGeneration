@@ -15,7 +15,7 @@ export class EntrarComponent implements OnInit {
 
   constructor(
     private auth: AuthService,
-    private router: Router
+    public router: Router
   )
    { }
 

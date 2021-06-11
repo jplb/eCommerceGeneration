@@ -8,7 +8,7 @@
                 <i class="fa fa-angle-double-left" aria-hidden="true">home</i>
             </a>
 
-            <h1 class="fs-54 text-center"> Registro de novos produtos</h1>
+            <h1 class="fs-54 text-center"> Atualizar produto</h1>
 
 
             <div class="row  d-flex justify-content-center mt-5 mb-5">
@@ -45,49 +45,12 @@
 
 
                     <div class="d-flex justify-content-center mb-5">
-                        <button class="btn btn-success" (click)='cadastrar()'>Cadastrar</button>
+                        <button class="btn btn-success mr-4" (click)='atualizar()'>Atualizar</button>
+                        <button class="btn btn-danger" routerLink="/produto">Voltar</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-</div>
-<!--/Registro de Novo Produto-->
-
-
-<div class="container">
-    <div class="row mt-5">
-        <div class="col-md-12">
-            <h2 class="text-center">Todos Produtos</h2>
-        </div>
-    </div>
-
-    <!--Card de Produtos-->
-    <div class="container-fluid">
-        <div class="row d-flex justify-content-center">
-
-
-            <div class="col-md-4 mb-5 mt-5" *ngFor='let item of listaProdutos'>
-                <div class="card">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <img class="card-img-top" src="{{item.foto}}">
-                            <h5 class="card-text">{{item.preco}} R$</h5>
-                            <a class="justify-content-end">
-                                <button class="btn btn-info mr-3"
-                                    [routerLink]="['/produto-edit',item.id]">Editar</button>
-                                <button class="btn btn-danger"
-                                    [routerLink]="['/produto-delete',item.id]">Apagar</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <!--/Card de Produtos-->
 
 </div>
