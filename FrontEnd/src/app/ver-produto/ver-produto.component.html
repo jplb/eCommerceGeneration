@@ -1,0 +1,56 @@
+<div class="container mt-3 mb-5">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-12">
+        <h1 class="text-center titulo">{{VerProduto.nome}}</h1>
+      </div>
+    </div>
+  
+    <!--FOTO DO PRODUTO-->
+    <div id="grup">
+      <a href=""><img src="https://static3.tcdn.com.br/img/img_prod/482157/180_camiseta_t_shirt_asas_off_white_7166_1_c7abb27e05a87d60b0737bb521ce3ba6.jpg" alt=""></a>
+     <!--<img src={{VerProduto.foto}}>--> 
+
+      <div class="col-5" id="txt-grup">
+        <h2>Gatos Miando</h2>
+  
+        <h1>R$ 79,90</h1>
+          <!--{{VerProduto.preco.toFixed(2).replace('.', ',')}}-->
+      
+          <div class="y-productSkuSelection"><span class="y-selectionDesc mr-2">selecione um tamanho</span>
+            <input type="radio" name="1254386558" id="953086992" value="953086992">
+            <label for="953086992" class="mr-2">PP</label>
+
+            <input type="radio" name="1254386558" id="953086992" value="953086992">
+            <label for="953086992" class="mr-2">P</label>
+        
+            <input type="radio" name="1254386558" id="1097046190" value="1097046190">
+            <label for="1097046190" class="mr-2">M</label>
+        
+            <input type="radio" name="1254386558" id="1290346762" value="1290346762">
+            <label for="1290346762" class="mr-2">G</label>
+
+            <input type="radio" name="1254386558" id="1290346762" value="1290346762">
+            <label for="1290346762" class="mr-2">XG</label>
+
+            <input type="radio" name="1254386558" id="1290346762" value="1290346762">
+            <label for="1290346762" class="mr-2">XXG</label>
+        </div>
+  
+        <!--QUANTIDADE-->
+        <div id="quantrow" class="row">
+          <div class="col-md-5">
+            <p> Quantidade:</p>
+          </div>
+          <div class="col-md-1">
+            <p></p>
+          </div>
+          <div class="col-md-5" id="quantidade">
+            <input type="button" id="minus" value="-"/>
+            <input class="text" size="1" value="1" type="text"
+              maxlength="2" />
+            <input type="button" id="plus" value="+">
+          </div>
+      </div>
+    </div>
+  </div>
+  

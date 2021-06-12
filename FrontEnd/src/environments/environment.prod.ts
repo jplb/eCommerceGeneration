@@ -1,7 +1,8 @@
 export const environment = {
+  baseUrl: 'http://localhost:8080',
   production: true,
   token: '',
   nome: '',
-  id:0,
-  foto:''
+  id: 0,
+  foto: '',
 };

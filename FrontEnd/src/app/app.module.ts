@@ -11,6 +11,8 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { FormsModule } from '@angular/forms';
 import { ProdutoComponent } from './produto/produto.component';
 import { HomeComponent } from './home/home.component';
+import { VerProdutoComponent } from './ver-produto/ver-produto.component';
+import { VitrineComponent } from './vitrine/vitrine.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
 
@@ -21,8 +23,10 @@ import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.c
     RodapeComponent,
     EntrarComponent,
     CadastrarComponent,
-    ProdutoComponent,
     HomeComponent,
+    VerProdutoComponent,
+    VitrineComponent
+    ProdutoComponent,
     ProdutoEditComponent,
     ProdutoDeleteComponent
   ],
