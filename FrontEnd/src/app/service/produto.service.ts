@@ -3,6 +3,7 @@ import { VerProduto } from '../model/VerProduto';
 import { environment } from './../../environments/environment.prod';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Produto } from '../model/Produto';
 
 
 @Injectable({
@@ -10,12 +11,7 @@ import { Injectable } from '@angular/core';
 })
 export class ProdutoService {
 
-  constructor(private http: HttpClient) { }
-
-  token = {
-    headers: new HttpHeaders().set("Authorization", environment.token)
-  }
-
+  /* Início alterar Produto para VerProduto
   getByIdProduto(id:number): Observable <VerProduto>{ //Busca produto por id
     return this.http.get<VerProduto>(`${environment.baseUrl}/produto/${id}`)
   }
@@ -38,5 +34,34 @@ export class ProdutoService {
 
   deleteProduto(id:number):Observable<VerProduto>{
     return this.http.delete<VerProduto>(`${environment.baseUrl}/produto/${id}`, this.token)
+  }
+} Fim alterar Produto para VerProduto*/
+ 
+  constructor( private http: HttpClient) { }
+
+  token = {
+    headers: new HttpHeaders().set('Authorization', environment.token)
+  }
+
+  postProduto(produto: Produto): Observable<Produto>{
+    return this.http.post<Produto>('http://localhost:8080/produto', produto, this.token)
+  }
+
+  getAllProdutos(): Observable<Produto[]>{
+    return this.http.get<Produto[]>('http://localhost:8080/produto',  this.token)
+  }
+
+
+  getByIdProduto(id: number): Observable<Produto>{
+    return this.http.get<Produto>(`http://localhost:8080/produto/${id}`, this.token)
+  }
+
+
+  putProduto(produto: Produto): Observable<Produto>{
+    return this.http.put<Produto>('http://localhost:8080/produto', produto, this.token)
+  }
+
+  deleteProduto(id: number){
+    return this.http.delete(`http://localhost:8080/produto/${id}`,this.token)
   }
 }

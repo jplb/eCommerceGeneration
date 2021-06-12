@@ -1,0 +1,39 @@
+<div class="container justify-content-center mt-5 mb-5">
+    <div class="row d-flex justify-content-center mb-5 mt-5">
+        <div class="cold-md-12 text-center text-secondary">
+            <h1> Dados do Produto</h1>
+        </div>
+    </div>
+    <div class="row mt-5 mr-5">
+        <!--Card do Produto-->
+        <div class="col-md-6 mb-5 mt-5">
+            <div class="card">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <img class="card-img-top" src="{{produto.foto}}">
+                        <h5 class="card-text">{{produto.nome}}</h5>
+                        <h5 class="card-text">{{produto.preco}} R$</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--/Card do Produto-->
+
+        <div class="col-md-6">
+            <h3>Especificações e dados de estoque</h3>
+            <hr>
+            <h5 class="card-text">Cor: {{produto.cor}}</h5>
+            <h5 class="card-text">Tamanho: {{produto.tamanho}}</h5>
+            <h5 class="card-text">Modelo: {{produto.modelo}}</h5>
+            <h5 class="card-text">unids disponíveis: {{produto.estoque}}</h5>
+        </div>
+
+    </div>
+
+    <div class="d-flex justify-content-center mb-5">
+        <button class="btn btn-success" routerLink="/produto">Voltar</button>
+        <button class="btn btn-danger mr-4" (click)='apagar()'>Apagar</button>
+    </div>
+
+</div>
