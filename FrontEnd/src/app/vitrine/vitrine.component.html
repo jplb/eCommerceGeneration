@@ -1,0 +1,30 @@
+<div class="container mt-5 mb-5">
+
+    <div class="row mb-5">
+      <div class="col-md-12">
+          <h1 class="text-center">Vitrine</h1>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <!--DIV VITRINE-->
+      <div class="col-sm-4 mb-4" *ngFor='let VerProduto of listaProdutos'>
+        
+
+        <!--ESPAÇO COM A CAMISETA-->
+        <div class="card" [routerLink]="['/ver-produto', VerProduto.id]">
+          <div class="d-flex justify-content-center">
+            <img class="img-fluid" alt="Imagem da camiseta" src="{{VerProduto.foto}}">
+          </div>
+          <div class="card-body text-center">
+            <h4 class="nome">{{VerProduto.nome}}</h4>
+            <small class="text-muted">{{VerProduto.tema}}</small>
+            <p id="preco">{{VerProduto.preco.toFixed(2).replace('.', ',')}}</p>
+              <a class="btn btn-verde w-100" [routerLink]="['/ver-produto', VerProduto.id]">Ver camiseta</a>
+          </div>
+          
+        </div>
+  
+      </div>
+  
