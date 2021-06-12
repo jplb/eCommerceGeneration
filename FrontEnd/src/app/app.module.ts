@@ -25,7 +25,7 @@ import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.c
     CadastrarComponent,
     HomeComponent,
     VerProdutoComponent,
-    VitrineComponent
+    VitrineComponent,
     ProdutoComponent,
     ProdutoEditComponent,
     ProdutoDeleteComponent
