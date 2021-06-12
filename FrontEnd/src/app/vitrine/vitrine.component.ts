@@ -4,7 +4,7 @@ import { environment } from 'src/environments/environment.prod';
 import { VerProduto } from '../model/VerProduto';
 import { User } from '../model/User';
 import { AuthService } from '../service/auth.service';
-import { ProdutoService } from '../service/produto.service';
+import { VerProdutoService } from '../service/ver-produto.service';
 
 @Component({
   selector: 'app-vitrine',
@@ -22,7 +22,7 @@ export class VitrineComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private produtoService: ProdutoService,
+    private verprodutoService: VerProdutoService,
     private authService: AuthService
   ) { }
 
@@ -32,7 +32,7 @@ export class VitrineComponent implements OnInit {
   }
 
   findAllProdutos() {
-    this.produtoService.getAllProduto().subscribe((resp: VerProduto[])=>{
+    this.verprodutoService.getAllProduto().subscribe((resp: VerProduto[])=>{
       this.listaProdutos = resp;
     });
   }
