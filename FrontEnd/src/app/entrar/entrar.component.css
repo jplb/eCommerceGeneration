@@ -1,0 +1,53 @@
+.top{
+    background-color: white;
+    height: 4vh;
+  
+  }
+  .background{
+    background-color: white;
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+  .imagem{
+    height: 150px;
+    align-self: flex-start;
+    margin: 25px;
+    margin-top: 50px;
+  
+  }
+  
+  #caixa {
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 60vh;
+    margin: 20vh;
+    padding: 30px;
+    border-radius: 50px;
+    box-shadow: 2px 1px 1em;
+  }
+  .center {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .btn {
+    color: white;
+    background-color: rgb(6, 90, 6);
+  }
+  #entrar {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .bottom{
+    background-color:orangered;
+    height: 10vh;
+    align-items: flex-end;
+  
+  }
+ 
