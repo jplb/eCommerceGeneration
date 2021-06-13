@@ -1,30 +1,208 @@
-<div class="container mt-5 mb-5">
+<div class="container-fluid mt-5 mb-5">
 
-    <div class="row mb-5">
-      <div class="col-md-12">
-          <h1 class="text-center">Vitrine</h1>
+  <div class="row mb-5">
+    <div class="col-md-12">
+      <h1 class="text-center">Vitrine</h1>
+    </div>
+  </div>
+
+  <div class="row d-flex justify-content-center mt-5 mb-5 ml-2">
+    <!--DIV VITRINE-->
+    <!--O que está comentado é para testes sem puxar do banco-->
+    <!--<div class="col-md-3"> <!--*ngFor='let VerProduto of listaProdutos'>-->
+    <div class="col-md-3" *ngFor='let VerProduto of listaProdutos'>
+      <!--ESPAÇO COM A CAMISETA-->
+      <!--<div class="card" [routerLink]="['/ver-produto']"><!--, VerProduto.id]">-->
+      <div class="card" [routerLink]="['/ver-produto', VerProduto.id]">
+        <div class="d-flex justify-content-center">
+          <!--<img class="img-fluid"
+            src="https://static3.tcdn.com.br/img/img_prod/482157/180_camiseta_t_shirt_sisters_6828_1_cbd723c2f6b107cf0620e5576aaf3f00.jpg"
+            alt="" width="280px">-->
+          <img class="img-fluid" alt="Foto da camiseta" src="{{VerProduto.foto}}">
+        </div>
+        <div class="card-body text-center">
+          <!--<h4 class="nome">Girls Just Have Fun</h4>-->
+          <h4 class="nome">{{VerProduto.nome}}</h4>
+          <!--<small class="text-muted">Indie</small>-->
+          <small class="text-muted">{{VerProduto.tema}}</small>
+          <!--<p id="preco">R$ 89,90</p>-->
+          <p id="preco">{{VerProduto.preco.toFixed(2).replace('.', ',')}}</p>
+          <!--<a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>-->
+          <a class="btn btn-orange w-100" [routerLink]="['/ver-produto', VerProduto.id]">Ver Detalhes</a>
+        </div>
+      </div>
+    </div>
+    <!--
+    <div class="col-md-3">
+      <!--  <div class="col-md-3" *ngFor='let VerProduto of listaProdutos'>
+      <!--ESPAÇO COM A CAMISETA-->
+    <!--  <div class="card" [routerLink]="['/ver-produto']">
+        <!--<div class="card" [routerLink]="['/ver-produto'], VerProduto.id]">-->
+    <!--<div class="d-flex justify-content-center">
+          <img class="img-fluid"
+            src="https://static3.tcdn.com.br/img/img_prod/482157/180_camiseta_t_shirt_sisters_6828_1_cbd723c2f6b107cf0620e5576aaf3f00.jpg"
+            alt="" width="280px">
+          <!--<img class="img-fluid" alt="Imagem da camiseta" src="{{VerProduto.foto}}">-->
+    <!--</div>
+        <div class="card-body text-center">
+          <h4 class="nome">Girls Just Have Fun</h4>
+          <!--{{VerProduto.nome}}-->
+    <!--<small class="text-muted">Indie</small>
+          <!--{{VerProduto.tema}}-->
+    <!--<p id="preco">R$ 89,90</p>
+          <!--{{VerProduto.preco.toFixed(2).replace('.', ',')}}-->
+    <!--<a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
+          <!--", VerProduto.id]">Ver camiseta</a>-->
+    <!--</div>
+      </div>
+    </div>
+    <!--
+    <div class="col-md-3">
+      <!-- *ngFor='let VerProduto of listaProdutos'>-->
+    <!--ESPAÇO COM A CAMISETA-->
+    <!--     <div class="card" [routerLink]="['/ver-produto']">
+        <!--, VerProduto.id]">-->
+    <!--       <div class="d-flex justify-content-center">
+          <img class="img-fluid"
+            src="https://static3.tcdn.com.br/img/img_prod/482157/180_camiseta_t_shirt_sisters_6828_1_cbd723c2f6b107cf0620e5576aaf3f00.jpg"
+            alt="" width="280px">
+          <!--<img class="img-fluid" alt="Imagem da camiseta" src="{{VerProduto.foto}}">-->
+    <!--      </div>
+        <div class="card-body text-center">
+          <h4 class="nome">Girls Girls Girls</h4>
+          <!--{{VerProduto.nome}}-->
+    <!--        <small class="text-muted">Indie</small>
+          <!--{{VerProduto.tema}}-->
+    <!--        <p id="preco">R$ 10</p>
+          <!--{{VerProduto.preco.toFixed(2).replace('.', ',')}}-->
+    <!--       <a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
+          <!--", VerProduto.id]">Ver camiseta</a>-->
+    <!--        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-3">
+      <!-- *ngFor='let VerProduto of listaProdutos'>-->
+    <!--ESPAÇO COM A CAMISETA-->
+    <!--      <div class="card" [routerLink]="['/ver-produto']">
+        <!--, VerProduto.id]">-->
+    <!--        <div class="d-flex justify-content-center">
+          <img class="img-fluid"
+            src="https://static3.tcdn.com.br/img/img_prod/482157/180_camiseta_t_shirt_sisters_6828_1_cbd723c2f6b107cf0620e5576aaf3f00.jpg"
+            alt="" width="280px">
+          <!--<img class="img-fluid" alt="Imagem da camiseta" src="{{VerProduto.foto}}">-->
+    <!--    </div>
+        <div class="card-body text-center">
+          <h4 class="nome">I'm just a girl</h4>
+          <!--{{VerProduto.nome}}-->
+    <!--  <small class="text-muted">Indie</small>
+          <!--{{VerProduto.tema}}-->
+    <!--    <p id="preco">R$ 20</p>
+          <!--{{VerProduto.preco.toFixed(2).replace('.', ',')}}-->
+    <!--<a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
+          <!--", VerProduto.id]">Ver camiseta</a>-->
+    <!--  </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row d-flex justify-content-center mt-5 mb-5 ml-2">
+    <!--DIV VITRINE-->
+    <!--
+    <div class="col-md-3">
+      <!-- *ngFor='let VerProduto of listaProdutos'>-->
+    <!--ESPAÇO COM A CAMISETA-->
+    <!--  <div class="card" [routerLink]="['/ver-produto']">
+        <!--, VerProduto.id]">-->
+    <!--<div class="d-flex justify-content-center">
+          <img class="img-fluid"
+            src="https://static3.tcdn.com.br/img/img_prod/482157/180_camiseta_t_shirt_sisters_6828_1_cbd723c2f6b107cf0620e5576aaf3f00.jpg"
+            alt="" width="280px">
+          <!--<img class="img-fluid" alt="Imagem da camiseta" src="{{VerProduto.foto}}">-->
+    <!--</div>
+        <div class="card-body text-center">
+          <h4 class="nome">Nome</h4>
+          <!--{{VerProduto.nome}}-->
+    <!--<small class="text-muted">Tema</small>
+          <!--{{VerProduto.tema}}-->
+    <!--     <p id="preco">R$ 10</p>
+          <!--{{VerProduto.preco.toFixed(2).replace('.', ',')}}-->
+    <!-- <a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
+          <!--", VerProduto.id]">Ver camiseta</a>-->
+    <!--       </div>
       </div>
     </div>
 
-
-    <div class="row">
-      <!--DIV VITRINE-->
-      <div class="col-sm-4 mb-4" *ngFor='let VerProduto of listaProdutos'>
-        
-
-        <!--ESPAÇO COM A CAMISETA-->
-        <div class="card" [routerLink]="['/ver-produto', VerProduto.id]">
-          <div class="d-flex justify-content-center">
-            <img class="img-fluid" alt="Imagem da camiseta" src="{{VerProduto.foto}}">
-          </div>
-          <div class="card-body text-center">
-            <h4 class="nome">{{VerProduto.nome}}</h4>
-            <small class="text-muted">{{VerProduto.tema}}</small>
-            <p id="preco">{{VerProduto.preco.toFixed(2).replace('.', ',')}}</p>
-              <a class="btn btn-verde w-100" [routerLink]="['/ver-produto', VerProduto.id]">Ver camiseta</a>
-          </div>
-          
-        </div>
-  
+    <div class="col-md-3">
+      <!-- *ngFor='let VerProduto of listaProdutos'>-->
+    <!--ESPAÇO COM A CAMISETA-->
+    <!-- <div class="card" [routerLink]="['/ver-produto']">
+        <!--, VerProduto.id]">-->
+    <!--<div class="d-flex justify-content-center">
+          <img class="img-fluid"
+            src="https://static3.tcdn.com.br/img/img_prod/482157/180_camiseta_t_shirt_sisters_6828_1_cbd723c2f6b107cf0620e5576aaf3f00.jpg"
+            alt="" width="280px">
+          <!--<img class="img-fluid" alt="Imagem da camiseta" src="{{VerProduto.foto}}">-->
+    <!-- </div>
+        <div class="card-body text-center">
+          <h4 class="nome">Nome</h4>
+          <!--{{VerProduto.nome}}-->
+    <!--<small class="text-muted">Tema</small>
+          <!--{{VerProduto.tema}}-->
+    <!-- <p id="preco">R$ 10</p>
+          <!--{{VerProduto.preco.toFixed(2).replace('.', ',')}}-->
+    <!--<a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
+          <!--", VerProduto.id]">Ver camiseta</a>-->
+    <!--</div>
       </div>
-  
+    </div>
+
+    <div class="col-md-3">
+      <!-- *ngFor='let VerProduto of listaProdutos'>-->
+    <!--ESPAÇO COM A CAMISETA-->
+    <!--<div class="card" [routerLink]="['/ver-produto']">
+        <!--, VerProduto.id]">-->
+    <!--<div class="d-flex justify-content-center">
+          <img class="img-fluid"
+            src="https://static3.tcdn.com.br/img/img_prod/482157/180_camiseta_t_shirt_sisters_6828_1_cbd723c2f6b107cf0620e5576aaf3f00.jpg"
+            alt="" width="280px">
+          <!--<img class="img-fluid" alt="Imagem da camiseta" src="{{VerProduto.foto}}">-->
+    <!-- </div>
+        <div class="card-body text-center">
+          <h4 class="nome">Nome</h4>
+          <!--{{VerProduto.nome}}-->
+    <!-- <small class="text-muted">Tema</small>
+          <!--{{VerProduto.tema}}-->
+    <!-- <p id="preco">R$ 10</p>
+          <!--{{VerProduto.preco.toFixed(2).replace('.', ',')}}-->
+    <!--  <a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
+          <!--", VerProduto.id]">Ver camiseta</a>-->
+    <!-- </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <!-- *ngFor='let VerProduto of listaProdutos'>-->
+    <!--ESPAÇO COM A CAMISETA-->
+    <!--<div class="card" [routerLink]="['/ver-produto']">
+        <!--, VerProduto.id]">-->
+    <!--<div class="d-flex justify-content-center">
+          <img class="img-fluid"
+            src="https://static3.tcdn.com.br/img/img_prod/482157/180_camiseta_t_shirt_sisters_6828_1_cbd723c2f6b107cf0620e5576aaf3f00.jpg"
+            alt="" width="280px">
+          <!--<img class="img-fluid" alt="Imagem da camiseta" src="{{VerProduto.foto}}">-->
+    <!--</div>
+        <div class="card-body text-center">
+          <h4 class="nome">Nome</h4>
+          <!--{{VerProduto.nome}}-->
+    <!--<small class="text-muted">Tema</small>
+          <!--{{VerProduto.tema}}-->
+    <!--<p id="preco">R$ 10</p>
+          <!--{{VerProduto.preco.toFixed(2).replace('.', ',')}}-->
+    <!--<a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
+          <!--", VerProduto.id]">Ver camiseta</a>-->
+  </div>
+</div>
+<!--</div>
+</div>
+</div>-->
