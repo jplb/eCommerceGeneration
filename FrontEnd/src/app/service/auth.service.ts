@@ -11,11 +11,12 @@ import { UserLogin } from '../model/UserLogin';
 })
 export class AuthService {
 
-  private router: Router
+  
 
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+     public router : Router
   ) { }
 
   entrar(userLogin: UserLogin) : Observable<UserLogin>{
@@ -38,7 +39,7 @@ export class AuthService {
 
   DesligarMenuERodape(){
     let ok: boolean = true
-    if(this.router.url == '/entrar' || this.router.url == '/produto' || this.router.url == "/cadastrar") {
+    if(this.router.url == '/entrar' || this.router.url == '/produto' || this.router.url == '/cadastrar') {
       ok = false
     }
     return ok
