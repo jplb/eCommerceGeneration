@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  public router: Router
+  pesquisa: string
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  atualizaBusca(){
+    this.router.navigateByUrl('/home', { skipLocationChange: true }).then(() =>{
+         this.router.navigate(["/pesquisa",this.pesquisa])
+    })
+}
 
 }

@@ -1,0 +1,9 @@
+.fundo{
+    background-image: url(https://i.imgur.com/R7i2PiB.jpg);
+    background-repeat: repeat;
+    background-size: 100%;
+    }
+    
+    p{
+        text-align: justify;
+    }

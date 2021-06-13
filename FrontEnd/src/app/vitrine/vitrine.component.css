@@ -1,0 +1,41 @@
+@font-face {
+  font-family: bastian;
+  src: url(../../assets/fontes/kinan/Kinan.ttf)
+}
+
+.btn-orange {
+    color: white;
+    background-color: #FF4500;
+  }
+
+  .card {
+    cursor: pointer;
+    width: 320px;
+  }
+  .card-footer {
+    background-color: white;
+    border-top: none;
+  }
+ 
+  h1 {
+    text-align: center;
+    color: #1c372c;
+    margin-bottom: 10px;
+    font-family: bastian;
+    font-size: 80pt;
+  }
+  #preco{
+    color: #4F4F4F;
+    font-size: 40px;
+  }
+  
+  img{
+    max-width: 500px;
+    max-height: 500px;
+  }
+
+  h4 {
+    text-align: center;
+    color: #000000;
+  }
+  

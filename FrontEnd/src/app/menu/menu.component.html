@@ -1,103 +1,79 @@
-<!-- Navigation -->
-<nav class="navbar navbar-expand-sm navbar-with bg-with d-flex justify-items-center">
-    <div class="navbar-collapse collapse w-0  order-1 order-md-0 dual-collapse2">
+<div>
+  <!-- Navigation -->
+  <div style="background-color:black">
+    <nav class="navbar navbar-expand-sm navbar-with bg-with d-flex justify-items-center ml-2">
+      <div class="navbar-collapse collapse w-0  order-1 order-md-0 dual-collapse2">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <img src="https://i.imgur.com/LsOs7HC.png"  height="150px" class="d-inline-block align-top" alt="Logo">
-            </li>
-          
+          <li class="nav-item active">
+            <img
+              src="https://attachment.outlook.live.net/owa/MSA%3Aluana.bezana%40hotmail.com/service.svc/s/GetAttachmentThumbnail?id=AQMkADAwATY3ZmYAZS1lOTBlLTdkZTgtMDACLTAwCgBGAAADD5x51E%2FobUi0GkFbdQnvVwcAbCwBiqMDAUGNsHT6ew6Y3wAAAgEJAAAAbCwBiqMDAUGNsHT6ew6Y3wAEjG%2BOHAAAAAESABAAjm%2FO9emNG0mcwi9YHTKZNQ%3D%3D&thumbnailType=2&isc=1&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjMwODE3OUNFNUY0QjUyRTc4QjJEQjg5NjZCQUY0RUNDMzcyN0FFRUUiLCJ0eXAiOiJKV1QiLCJ4NXQiOiJNSUY1emw5TFV1ZUxMYmlXYTY5T3pEY25ydTQifQ.eyJvcmlnaW4iOiJodHRwczovL291dGxvb2subGl2ZS5jb20iLCJ1YyI6IjE2YjdkNTE0MjBlZTQzODFhN2Q1Zjg3MmEwZmZlZjgyIiwidmVyIjoiRXhjaGFuZ2UuQ2FsbGJhY2suVjEiLCJhcHBjdHhzZW5kZXIiOiJPd2FEb3dubG9hZEA4NGRmOWU3Zi1lOWY2LTQwYWYtYjQzNS1hYWFhYWFhYWFhYWEiLCJpc3NyaW5nIjoiV1ciLCJhcHBjdHgiOiJ7XCJtc2V4Y2hwcm90XCI6XCJvd2FcIixcInB1aWRcIjpcIjE4Mjk1ODI2Njg3MjU3MzZcIixcInNjb3BlXCI6XCJPd2FEb3dubG9hZFwiLFwib2lkXCI6XCIwMDA2N2ZmZS1lOTBlLTdkZTgtMDAwMC0wMDAwMDAwMDAwMDBcIixcInByaW1hcnlzaWRcIjpcIlMtMS0yODI3LTQyNTk4Mi0zOTEwMDQxMDY0XCJ9IiwibmJmIjoxNjIzNDYzMjU4LCJleHAiOjE2MjM0NjM4NTgsImlzcyI6IjAwMDAwMDAyLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMEA4NGRmOWU3Zi1lOWY2LTQwYWYtYjQzNS1hYWFhYWFhYWFhYWEiLCJhdWQiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvYXR0YWNobWVudC5vdXRsb29rLmxpdmUubmV0QDg0ZGY5ZTdmLWU5ZjYtNDBhZi1iNDM1LWFhYWFhYWFhYWFhYSIsImhhcHAiOiJvd2EifQ.DQ_fsGgXcNx-7_zy_fsNRGVgHXgjkNp2t_qqMLIl0D00VEd_x5TaQ6YaH4u8fqW7FpDvaEuBaYaiJu1tfTOkyUaj25HfC4GPXNePJSKYN0yTLuQqW2ovSSP7ulsxYzX91ClzbmqLG5QycdnHz5GXFDNuQG4RMID8P4jACftgl36HyEYFSc4VjE83A29kQDmgyINoOwvZtRL29_9SUFZNAv-Jx2fO87bbgpLwaLiPHeckY9pLfo8yTfWNBQfyuSuGcYEZmM6zRiwbva9asqLztRDVzJdoYc8XYZqTAGfrLbWRDiuy7ut_GmbRWoDyOeo0hJOQxBlw76iPI_6LK6xBqA&X-OWA-CANARY=O6joKDxsJEGtvYfsN8ByhTDm20NGLdkYKPT7XUrMjRG-RS7VVPW_q_xmIEVuDYzanE80mlxYnO4.&owa=outlook.live.com&scriptVer=20210607004.03&animation=true"
+              height="50px" class="d-inline-block align-top" alt="Logo">
+          </li>
+
         </ul>
-    </div>
-  
-    <div class= "navbar navbar-expand-sm d-flex justify-items-center">
-        <a class="navbar-collapse collapse w-0 font-weight-bold text-dark fs-14" href="#">HOME</a>
-        <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target=".order-2 dual-collapse2">
-            <span class="navbar-toggler-icon"></span>
+      </div>
+
+      <form class="form-inline my-2 my-lg-0">
+        <div id="divBusca">
+          <input [(ngModel)]="pesquisa" name="pesquisa" type="search" id="txtBusca" placeholder="Procurando algo?" />
+          <button class="btn btn-white" type="submit" id="cor" (click)="atualizaBusca()">
+            <i id="cor" class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </div>
+      </form>
+      <div class="navbar navbar-expand-sm d-flex justify-items-center" id="menu">
+        <a class="navbar-collapse collapse w-0 text-white fs-14" href="">HOME</a>
+        <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse"
+          data-target=".order-2 dual-collapse2">
+          <span class="navbar-toggler-icon"></span>
         </button>
-    
-    <div class="navbar-collapse collapse w-0 order-3 dual-collapse2">
-            <ul class="navbar-nav ml-5">
+
+        <div class="navbar-collapse collapse w-0 order-3 dual-collapse2">
+          <ul class="navbar-nav ml-3">
             <div class="nav-item dropdown">
-              <a class="btn btn-with dropdown-toggle font-weight-bold text-dark fs-14" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                PRODUTOS
+              <a class="btn btn-with dropdown-toggle text-white fs-14" role="button" id="dropdownMenuLink"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                VITRINE
               </a>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">Filmes</a>
-                <a class="dropdown-item" href="#">Geek</a>
-                <a class="dropdown-item" href="#">Frases</a>
-                <a class="dropdown-item" href="#">Músicas</a>
-                <a class="dropdown-item" href="#">Retrô</a>
-                <a class="dropdown-item" href="#">Temas Diversos</a>
+                <a class="dropdown-item" href="/vitrine/filmes">FILMES</a>
+                <a class="dropdown-item" href="/vitrine/geek">GEEK</a>
+                <a class="dropdown-item" href="/vitrine/frases">FRASES</a>
+                <a class="dropdown-item" href="/vitrine/musica">MÚSICA</a>
+                <a class="dropdown-item" href="/vitrine/retro">RETRÔ</a>
+                <a class="dropdown-item" href="/vitrine/indie">INDIE</a>
+                <a class="dropdown-item" href="/vitrine">TODOS OS TEMAS</a>
               </div>
             </div>
-  
-            <ul class="navbar-nav ml-5">
-            <li class="nav-item">
-                <a class="nav-link font-weight-bold text-dark fs-14" href="#">SEJA UM DESIGNER</a>
-            </li>
-            <ul class="navbar-nav ml-5">
-            <li class="nav-item">
-              <a class="nav-link font-weight-bold text-dark fs-14" href="#">SOBRE NÓS</a>
-          </li>
-          <ul class="navbar-nav ml-5">
-          <li class="nav-item">
-            <a class="nav-link font-weight-bold text-dark fs-14" href="#">AJUDA</a>
-        </li>
-      </ul>
-        </ul>
-      </ul>
-    </ul>
-</div>
-    </div>
-  </nav>
-          
-  <!-- Navigation -->
-  
-  <!--Nav-->
-  <ul class="nav justify-content-end navbar-dark" style="background-color:black">
-    <li class="nav-item mr-4">
-      <a class="nav-link " href="">
-        <p class="m-1 font-weight-bold text-white fs-14" routerLink="/entrar">Login</p></a>
-    </li>
-  
-    <li class="nav-item mr-4">
-      <a class="nav-link " href="">
-        <p class="m-1 font-weight-bold text-white fs-14" routerLink="/cadastrar">Cadastre-se</p></a>
-    </li>
-  </ul>
-  <!--/Nav-->
-  
-<!--Carrossel-->
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="https://i.imgur.com/TLDebIz.png" alt="Primeiro Slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="https://i.imgur.com/RiJyRje.png" alt="Segundo Slide">
-    </div>
-        <div class="carousel-item">
-      <img class="d-block w-100" src="https://i.imgur.com/j702w4g.png" alt="Terceiro Slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="https://i.imgur.com/9BzlP6U.png" alt="Quarto Slide">
-    </div>
+
+            <ul class="navbar-nav ml-3">
+              <li class="nav-item">
+                <a class="nav-link text-white fs-14" href="#">SEJA UM DESIGNER</a>
+              </li>
+              <ul class="navbar-nav ml-3">
+                <li class="nav-item">
+                  <a class="nav-link text-white fs-14" href="#">SOBRE NÓS</a>
+                </li>
+                <ul class="navbar-nav ml-3">
+                  <li class="nav-item">
+                    <a class="nav-link text-white fs-14" href="#">AJUDA</a>
+                  </li>
+                </ul>
+                <li class="nav-item mr-3 ml-3">
+                  <a class="nav-link">
+                    <a class="m-1 text-white fs-14" href="/entrar"><i class="fa fa-user" aria-hidden="true"></i></a></a>
+
+                </li>
+                <li class="nav-item mr-3">
+                  <a class="nav-link">
+                    <a class=" text-white fs-14" href="/pedido"><i class="fa fa-shopping-cart"
+                        aria-hidden="true"></i></a></a>
+                </li>
+              </ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Anterior</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Próximo</span>
-  </a>
 </div>
- <!--/Carrossel-->
-  
- 
