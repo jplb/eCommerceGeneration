@@ -1,0 +1,22 @@
+#img-bg{
+    background-image: url('https://i.imgur.com/YGX1TIQ.jpg');
+    
+
+    min-height: 695px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#img-in{
+
+background-image: url("https://i.imgur.com/AU8NMXZ.jpg?1");
+    min-height: 695px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+

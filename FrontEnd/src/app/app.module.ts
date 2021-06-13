@@ -18,6 +18,8 @@ import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.c
 import { PedidoComponent } from './pedido/pedido.component';
 import { BuscarComponent } from './buscar/buscar.component';
 import { MetodoPagamentoComponent } from './metodo-pagamento/metodo-pagamento.component';
+import { DesignerComponent } from './designer/designer.component';
+import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { MetodoPagamentoComponent } from './metodo-pagamento/metodo-pagamento.co
     ProdutoDeleteComponent,
     PedidoComponent,
     BuscarComponent,
-    MetodoPagamentoComponent
+    MetodoPagamentoComponent,
+    DesignerComponent,
+    SobreNosComponent
   ],
   imports: [
     BrowserModule,
