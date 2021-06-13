@@ -16,6 +16,7 @@ import { VitrineComponent } from './vitrine/vitrine.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
 import { DesignerComponent } from './designer/designer.component';
+import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { DesignerComponent } from './designer/designer.component';
     ProdutoComponent,
     ProdutoEditComponent,
     ProdutoDeleteComponent,
-    DesignerComponent
+    DesignerComponent,
+    SobreNosComponent
   ],
   imports: [
     BrowserModule,
