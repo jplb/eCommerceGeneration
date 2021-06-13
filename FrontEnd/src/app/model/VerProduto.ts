@@ -1,3 +1,4 @@
+import { User } from "./User"
 
 export class VerProduto{
     public id: number
@@ -9,4 +10,7 @@ export class VerProduto{
     public estoque: number
     public preco: number
     public modelo: string
+    public user: User
+    public quantidade: number
+    public subTotal: number
 }

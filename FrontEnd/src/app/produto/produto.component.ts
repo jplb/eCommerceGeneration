@@ -11,7 +11,7 @@ import { ProdutoService } from '../service/produto.service';
 })
 export class ProdutoComponent implements OnInit {
 
-  produto: Produto = new Produto() 
+  produto: Produto = new Produto()
   listaProdutos: Produto[]
 
   constructor(
@@ -23,32 +23,26 @@ export class ProdutoComponent implements OnInit {
 
   ngOnInit() {
 
-    if (environment.token =='') {
+    if (environment.token == '') {
       alert('Sua sessão expirou! Faça login novamente')
       this.router.navigate(['/entrar'])
-     }
-     this.findAllProdutos()
- }
-
- findAllProdutos(){
-  this.produtoService.getAllProdutos().subscribe((resp: Produto[])=>{
-    this.listaProdutos = resp
-  })
- }
-
- cadastrar(){
-  this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
-    this.produto = resp
-    alert('Produto cadastrado com sucesso!')
+    }
     this.findAllProdutos()
-    this.produto = new Produto() 
-  })
-
- }
-
-
-
-
   }
 
+  findAllProdutos() {
+    this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
+      this.listaProdutos = resp
+    })
+  }
 
+  cadastrar() {
+    this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
+      this.produto = resp
+      alert('Produto cadastrado com sucesso!')
+      this.findAllProdutos()
+      this.produto = new Produto()
+    })
+
+  }
+}
