@@ -16,6 +16,7 @@ import { ProdutoService } from '../service/produto.service';
 })
 export class MenuComponent implements OnInit {
 
+ 
 
 produto: Produto = new Produto
 
@@ -66,5 +67,7 @@ sair() {
   this.router.navigate(["/home"])
   
 }
+
+ 
 
 }

@@ -11,6 +11,9 @@ import { ProdutoComponent } from './produto/produto.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { DesignerComponent } from './designer/designer.component';
 import { CategoriaComponent } from './categoria/categoria.component';
+import { PedidoComponent } from './pedido/pedido.component';
+import { MetodoPagamentoComponent } from './metodo-pagamento/metodo-pagamento.component';
+import { BuscarComponent } from './buscar/buscar.component';
 
 
 const routes: Routes = [
@@ -26,8 +29,13 @@ const routes: Routes = [
   {path:'produto-delete/:id', component: ProdutoDeleteComponent},
   {path:'sobre-nos', component: SobreNosComponent},
   {path:'designer',component: DesignerComponent},
-  {path:'categoria/:id', component: CategoriaComponent}
+  {path:'categoria/:id', component: CategoriaComponent},
   
+  { path: 'produto-edit/:id', component: ProdutoEditComponent},
+  { path: 'produto-delete/:id', component: ProdutoDeleteComponent},
+  { path: 'pedido', component: PedidoComponent},
+  { path: 'metodo-pagamento/:valorTotal', component: MetodoPagamentoComponent},
+  { path: 'buscar/:procurar', component: BuscarComponent}
 
 ];
 

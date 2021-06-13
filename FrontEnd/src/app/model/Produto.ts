@@ -4,7 +4,7 @@ import { User } from "./User"
 export class Produto {
 
     public id: number
-    public nome:  string
+    public nome: string
     public foto: string
     public cor: string
     public tema: string
