@@ -1,0 +1,54 @@
+<div class="container mt-3 mb-5">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-12">
+        <h1 class="text-center titulo">{{VerProduto.nome}}</h1>
+      </div>
+    </div>
+  
+    <!--FOTO DO PRODUTO-->
+    <div id="grup">
+      <a href=""><img src={{VerProduto.foto}}></a>
+
+      <div class="col-5" id="txt-grup">
+        <h2>Gatos Miando</h2>
+  
+        <h1>{{VerProduto.preco.toFixed(2).replace('.', ',')}}</h1>
+      
+          <div class="y-productSkuSelection"><span class="y-selectionDesc mr-2">Selecione um tamanho</span>
+            <input type="radio" name="1254386558" id="953086992" value="953086992">
+            <label for="953086992" class="mr-2">PP</label>
+
+            <input type="radio" name="1254386558" id="953086992" value="953086992">
+            <label for="953086992" class="mr-2">P</label>
+        
+            <input type="radio" name="1254386558" id="1097046190" value="1097046190">
+            <label for="1097046190" class="mr-2">M</label>
+        
+            <input type="radio" name="1254386558" id="1290346762" value="1290346762">
+            <label for="1290346762" class="mr-2">G</label>
+
+            <input type="radio" name="1254386558" id="1290346762" value="1290346762">
+            <label for="1290346762" class="mr-2">XG</label>
+
+            <input type="radio" name="1254386558" id="1290346762" value="1290346762">
+            <label for="1290346762" class="mr-2">XXG</label>
+        </div>
+  
+        <!--QUANTIDADE-->
+        <div id="quantrow" class="row">
+          <div class="col-md-5">
+            <p> Quantidade:</p>
+          </div>
+          <div class="col-md-1">
+            <p></p>
+          </div>
+          <div class="col-md-5" id="quantidade">
+            <input type="button" id="minus" value="-"/>
+            <input class="text" size="1" value="1" type="text"
+              maxlength="2" />
+            <input type="button" id="plus" value="+">
+          </div>
+      </div>
+    </div>
+  </div>
+  
