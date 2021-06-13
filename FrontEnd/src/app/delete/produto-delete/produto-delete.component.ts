@@ -10,9 +10,6 @@ import { environment } from 'src/environments/environment.prod';
   styleUrls: ['./produto-delete.component.css']
 })
 export class ProdutoDeleteComponent implements OnInit {
-
-
-
   
   produto: Produto = new Produto ()
   idProduto: number
