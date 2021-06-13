@@ -1,4 +1,16 @@
-.fs-14
-{
+@font-face {
+  font-family: "caramella";
+  src: url(../../assets/fontes/caramella/Caramella_Regular.ttf)
+}
+
+.fs-14{
     font-size: 14pt;
 }
+
+  .a{
+    font-family: "stayhome";
+  }
+
+  nav{
+    font-family: "caramella";
+  }

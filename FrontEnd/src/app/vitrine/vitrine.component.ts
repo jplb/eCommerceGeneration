@@ -22,7 +22,7 @@ export class VitrineComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private verprodutoService: VerProdutoService,
+    private verProdutoService: VerProdutoService,
     private authService: AuthService
   ) { }
 
@@ -32,7 +32,7 @@ export class VitrineComponent implements OnInit {
   }
 
   findAllProdutos() {
-    this.verprodutoService.getAllProduto().subscribe((resp: VerProduto[])=>{
+    this.verProdutoService.getAllProduto().subscribe((resp: VerProduto[])=>{
       this.listaProdutos = resp;
     });
   }
