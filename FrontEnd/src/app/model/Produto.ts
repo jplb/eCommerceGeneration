@@ -1,3 +1,6 @@
+import { Categoria } from "./Categoria"
+import { User } from "./User"
+
 export class Produto {
 
     public id: number
@@ -9,4 +12,6 @@ export class Produto {
     public preco: number
     public modelo: string
     public estoque: number
+    public categoria: Categoria
+    public usuario: User
 }

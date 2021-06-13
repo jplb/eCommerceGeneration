@@ -17,6 +17,7 @@ import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
 import { DesignerComponent } from './designer/designer.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { CategoriaComponent } from './categoria/categoria.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
     ProdutoEditComponent,
     ProdutoDeleteComponent,
     DesignerComponent,
-    SobreNosComponent
+    SobreNosComponent,
+    CategoriaComponent
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,9 @@ import { VerProdutoComponent } from './ver-produto/ver-produto.component';
 import { VitrineComponent } from './vitrine/vitrine.component';
 import { HomeComponent } from './home/home.component';
 import { ProdutoComponent } from './produto/produto.component';
+import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { DesignerComponent } from './designer/designer.component';
+import { CategoriaComponent } from './categoria/categoria.component';
 
 
 const routes: Routes = [
@@ -20,7 +23,11 @@ const routes: Routes = [
   { path: 'produto', component: ProdutoComponent },
   { path: 'home', component: HomeComponent },
   {path:'produto-edit/:id', component: ProdutoEditComponent},
-  {path:'produto-delete/:id', component: ProdutoDeleteComponent}
+  {path:'produto-delete/:id', component: ProdutoDeleteComponent},
+  {path:'sobre-nos', component: SobreNosComponent},
+  {path:'designer',component: DesignerComponent},
+  {path:'categoria/:id', component: CategoriaComponent}
+  
 
 ];
 

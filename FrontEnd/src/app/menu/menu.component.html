@@ -12,7 +12,7 @@
     </div>
   
     <div class= "navbar navbar-expand-sm d-flex justify-items-center">
-        <a class="navbar-collapse collapse w-0 font-weight-bold text-dark fs-14" href="#">HOME</a>
+        <a class="navbar-collapse collapse w-0 font-weight-bold text-dark fs-14" routerLink='/home'>HOME</a>
         <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target=".order-2 dual-collapse2">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -20,26 +20,22 @@
     <div class="navbar-collapse collapse w-0 order-3 dual-collapse2">
             <ul class="navbar-nav ml-5">
             <div class="nav-item dropdown">
-              <a class="btn btn-with dropdown-toggle font-weight-bold text-dark fs-14" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="btn btn-with dropdown-toggle font-weight-bold text-dark fs-14" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 PRODUTOS
               </a>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">Filmes</a>
-                <a class="dropdown-item" href="#">Geek</a>
-                <a class="dropdown-item" href="#">Frases</a>
-                <a class="dropdown-item" href="#">Músicas</a>
-                <a class="dropdown-item" href="#">Retrô</a>
-                <a class="dropdown-item" href="#">Temas Diversos</a>
+                <a *ngFor='let item of listaCategoria' class="dropdown-item" (click)="refresh2(item.id)" value="" [routerLink]="['/categoria',item.id]">{{item.tema}}</a>
+                <a class="dropdown-item" >Temas Diversos</a>
               </div>
             </div>
   
             <ul class="navbar-nav ml-5">
             <li class="nav-item">
-                <a class="nav-link font-weight-bold text-dark fs-14" href="#">SEJA UM DESIGNER</a>
+                <a class="nav-link font-weight-bold text-dark fs-14" routerLink='/designer'>SEJA UM DESIGNER</a>
             </li>
             <ul class="navbar-nav ml-5">
             <li class="nav-item">
-              <a class="nav-link font-weight-bold text-dark fs-14" href="#">SOBRE NÓS</a>
+              <a class="nav-link font-weight-bold text-dark fs-14" routerLink='/sobre-nos'>SOBRE NÓS</a>
           </li>
           <ul class="navbar-nav ml-5">
           <li class="nav-item">
