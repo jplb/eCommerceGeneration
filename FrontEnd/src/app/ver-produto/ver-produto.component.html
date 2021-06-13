@@ -1,54 +1,83 @@
 <div class="container mt-3 mb-5">
-    <div class="row d-flex justify-content-center">
-      <div class="col-md-12">
-        <h1 class="text-center titulo">{{VerProduto.nome}}</h1>
-      </div>
-    </div>
-  
-    <!--FOTO DO PRODUTO-->
-    <div id="grup">
-      <a href=""><img src={{VerProduto.foto}}></a>
-
-      <div class="col-5" id="txt-grup">
-        <h2>Gatos Miando</h2>
-  
-        <h1>{{VerProduto.preco.toFixed(2).replace('.', ',')}}</h1>
-      
-          <div class="y-productSkuSelection"><span class="y-selectionDesc mr-2">Selecione um tamanho</span>
-            <input type="radio" name="1254386558" id="953086992" value="953086992">
-            <label for="953086992" class="mr-2">PP</label>
-
-            <input type="radio" name="1254386558" id="953086992" value="953086992">
-            <label for="953086992" class="mr-2">P</label>
-        
-            <input type="radio" name="1254386558" id="1097046190" value="1097046190">
-            <label for="1097046190" class="mr-2">M</label>
-        
-            <input type="radio" name="1254386558" id="1290346762" value="1290346762">
-            <label for="1290346762" class="mr-2">G</label>
-
-            <input type="radio" name="1254386558" id="1290346762" value="1290346762">
-            <label for="1290346762" class="mr-2">XG</label>
-
-            <input type="radio" name="1254386558" id="1290346762" value="1290346762">
-            <label for="1290346762" class="mr-2">XXG</label>
-        </div>
-  
-        <!--QUANTIDADE-->
-        <div id="quantrow" class="row">
-          <div class="col-md-5">
-            <p> Quantidade:</p>
-          </div>
-          <div class="col-md-1">
-            <p></p>
-          </div>
-          <div class="col-md-5" id="quantidade">
-            <input type="button" id="minus" value="-"/>
-            <input class="text" size="1" value="1" type="text"
-              maxlength="2" />
-            <input type="button" id="plus" value="+">
-          </div>
-      </div>
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-12">
+      <!--<h1 class="text-center titulo font:Kinan">Indie</h1>-->
+      <h1 class="text-center titulo">{{verProduto.tema}}</h1>
     </div>
   </div>
-  
+
+  <!--FOTO DO PRODUTO-->
+  <div id="grup" class="d-flex justify-content-center">
+    <a href="">
+      <!--<img
+        src="https://static3.tcdn.com.br/img/img_prod/482157/180_camiseta_t_shirt_asas_off_white_7166_1_c7abb27e05a87d60b0737bb521ce3ba6.jpg"
+        alt="Foto do Produto" height="800px">-->
+      <img src={{verProduto.foto}} alt="Foto do Produto" height="800px">
+      </a>
+
+    <div class="col-5" id="txt-grup">
+      <!--<h2>Gatos Miando</h2>-->
+      <h2>{{verProduto.nome}}}}</h2>
+
+      <!--<h1>R$ 79,90</h1>-->
+      <h1>{{verProduto.preco.toFixed(2).replace('.', ',')}}</h1>
+
+      <div class="y-productSkuSelection"><span class="y-selectionDesc mr-2">Selecione um tamanho:</span></div>
+
+      <div><input type="radio" name="1254386558" id="953086992" value="PP">
+        <label for="953086992" class="mr-2">PP</label>
+
+        <input type="radio" name="1254386558" id="953086992" value="P">
+        <label for="953086992" class="mr-2">P</label>
+
+        <input type="radio" name="1254386558" id="1097046190" value="M">
+        <label for="1097046190" class="mr-2">M</label>
+
+        <input type="radio" name="1254386558" id="1290346762" value="G">
+        <label for="1290346762" class="mr-2">G</label>
+
+        <input type="radio" name="1254386558" id="1290346762" value="XG">
+        <label for="1290346762" class="mr-2">XG</label>
+
+        <input type="radio" name="1254386558" id="1290346762" value="XXG">
+        <label for="1290346762" class="mr-2">XXG</label>
+      </div>
+
+      <div class="y-productSkuSelection justify-content-center"><span class="y-selectionDesc mr-6">Selecione uma
+          cor:</span>
+        <a class="btn btn-with dropdown-toggle text-white  fs-14" role="button" id="dropdownMenuLink"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Cor
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="" value="Branco">Branco</a>
+          <a class="dropdown-item" href="" value="Preto">Preto</a>
+          <a class="dropdown-item" href="" value="Cinza">Cinza</a>
+          <a class="dropdown-item" href="" value="Vermelho">Vermelho</a>
+          <a class="dropdown-item" href="" value="Rosa">Rosa</a>
+          <a class="dropdown-item" href="" value="Amarelo">Amarelo</a>
+        </div>
+      </div>
+
+
+      <!--QUANTIDADE-->
+      <div id="quantrow" class="row">
+        <div class="col-md-5">
+          <p> Quantidade:</p>
+        </div>
+        <div class="col-md-1">
+          <p></p>
+        </div>
+        <div class="col-md-5" id="quantidade">
+          <!--<input type="button" id="minus" value="-" />-->
+          <input type="button" id="minus" (click)="processo(-1)" (click)="calculaSubTotal()" value="-"/>
+          <input class="text" size="1" value="1" type="text" maxlength="2" />
+          <input [(ngModel)]="quantidade" id="quantidade" name="quantidade" class="text" size="1" value="1" type="text" maxlength="2" />
+          <!--<input type="button" id="plus" value="+">-->
+          <input type="button" id="plus" (click)="processo(1)" (click)="calculaSubTotal()" value="+">
+        </div>
+      </div>
+      <!-- <button type="button" class="btn bb">Adicionar ao pedido</button>-->
+      <button type="button" class="btn bb" (click)="addPedido()">Adicionar ao pedido</button>
+    </div>
+  </div>

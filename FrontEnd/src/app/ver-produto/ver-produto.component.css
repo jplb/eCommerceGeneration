@@ -1,6 +1,12 @@
+
 @font-face {
-    font-family: bastian;
-    src:"../../src/assets/fontes/kinan/Kinan.ttf" ;
+    font-family: "Kinan";
+    src: url(../../assets/fontes/kinan/Kinan.ttf)
+  }
+
+  @font-face {
+    font-family: "caramella";
+    src: url(../../assets/fontes/caramella/Caramella_Regular.ttf)
   }
   
   #grup{
@@ -10,9 +16,9 @@
   
   .titulo{
     text-align: center;
-    color: #FF4500;
-    font-family: bastian;
-    font-size: 100pt;
+    color: #000000;
+    font-family: "Kinan";
+    font-size: 80pt;
     margin-bottom: 10px;
   }
   
@@ -25,6 +31,7 @@
   h1{
   
       font-size: 50pt;
+    
   }
   .bb{
       margin: 20px;
@@ -32,15 +39,8 @@
   }
   .btn{
       color: white;
-      background-color: #1c372c;
+      background-color: #420366;
       width: 90%;
-  }
-  #descricao{
-      display: flex;
-      width: 90%;
-      padding: 15px;
-      border-radius: 10px;
-      background-color:#884f0e79;
   }
   
   h2{
@@ -53,14 +53,15 @@
     font-size: 70px;
    }
   h5{
-    color:  #1c372c;
+    color:  #961475;
+    align-items: center;
   }
   
    #quantidade{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #A020F0;
+    background-color: #571180;
     border-radius:0px;
     max-width: 95px;
     height: 30px;
@@ -102,8 +103,8 @@
   }
   
   img{
-    max-width: 700px;
-    max-height: 500px;
+    max-width: 1000px;
+    max-height: 1000px;
   }
   
   #tamanho{
