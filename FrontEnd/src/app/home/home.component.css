@@ -1,28 +1,42 @@
 
+@font-face {
+  font-family: "Kinan";
+  src: url(../../assets/fontes/kinan/Kinan.ttf)
+}
+
+h1{
+  font-family: "Kinan";
+  font-size: 60pt;
+}
+
+
+@font-face {
+  font-family: "caramella";
+  src: url(../../assets/fontes/caramella/Caramella_Regular.ttf)
+}
+
+h2{
+  font-size: 50px;
+  font-family: "caramella";
+ }
 
   .btn{
       color: white;
-      background-color: #1c372c;
+      background-color: #FF4500;
       width: 90%;
-  }
-
- 
-  
-  img{
-    max-width: 500px;
-    max-height: 400px;
   }
 
   .card{
 border:none
   }
 
-  .carousel{
-      width:100%;
-      
+  .carousel-item{
+      width:1656px;      
   }
 
-  
+  img{
+    width: 900px;
+  }  
 
   * {
     box-sizing: border-box;
