@@ -30,8 +30,9 @@ h2{
 border:none
   }
 
-  .carousel-item{
-      width:1656px;      
+   .carousel-item{
+    max-width: 100%;
+ 
   }
 
   img{
