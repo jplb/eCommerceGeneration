@@ -11,41 +11,65 @@
           </li>
 
         </ul>
-      </div>
-
-      <form class="form-inline my-2 my-lg-0">
-        <div id="divBusca">
-          <input [(ngModel)]="pesquisa" name="pesquisa" type="search" id="txtBusca" placeholder="Procurando algo?" />
-          <button class="btn btn-white" type="submit" id="cor" (click)="atualizaBusca()">
-            <i id="cor" class="fa fa-search" aria-hidden="true"></i>
-          </button>
-        </div>
-      </form>
-      <div class="navbar navbar-expand-sm d-flex justify-items-center" id="menu">
-        <a class="navbar-collapse collapse w-0 text-white fs-14" href="">HOME</a>
-        <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse"
-          data-target=".order-2 dual-collapse2">
-          <span class="navbar-toggler-icon"></span>
+    </div>
+    </nav>
+  
+    <div class= "navbar navbar-expand-sm d-flex justify-items-center">
+        <a class="navbar-collapse collapse w-0 font-weight-bold text-dark fs-14" routerLink='/home'>HOME</a>
+        <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target=".order-2 dual-collapse2">
+            <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="navbar-collapse collapse w-0 order-3 dual-collapse2">
           <ul class="navbar-nav ml-3">
             <div class="nav-item dropdown">
-              <a class="btn btn-with dropdown-toggle text-white fs-14" role="button" id="dropdownMenuLink"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                VITRINE
+              <a class="btn btn-with dropdown-toggle font-weight-bold text-dark fs-14" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                PRODUTOS
               </a>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="/vitrine/filmes">FILMES</a>
-                <a class="dropdown-item" href="/vitrine/geek">GEEK</a>
-                <a class="dropdown-item" href="/vitrine/frases">FRASES</a>
-                <a class="dropdown-item" href="/vitrine/musica">MÚSICA</a>
-                <a class="dropdown-item" href="/vitrine/retro">RETRÔ</a>
-                <a class="dropdown-item" href="/vitrine/indie">INDIE</a>
-                <a class="dropdown-item" href="/vitrine">TODOS OS TEMAS</a>
+                <a *ngFor='let item of listaCategoria' class="dropdown-item" (click)="refresh2(item.id)" value="" [routerLink]="['/categoria',item.id]">{{item.tema}}</a>
+                <a class="dropdown-item" >Temas Diversos</a>
               </div>
             </div>
+  
+            <ul class="navbar-nav ml-5">
+            <li class="nav-item">
+                <a class="nav-link font-weight-bold text-dark fs-14" routerLink='/designer'>SEJA UM DESIGNER</a>
+            </li>
+            <ul class="navbar-nav ml-5">
+            <li class="nav-item">
+              <a class="nav-link font-weight-bold text-dark fs-14" routerLink='/sobre-nos'>SOBRE NÓS</a>
+          </li>
+          <ul class="navbar-nav ml-5">
+          <li class="nav-item">
+            <a class="nav-link font-weight-bold text-dark fs-14" href="#">AJUDA</a>
+        </li>
+      </ul>
+        </ul>
+      </ul>
+    </ul>
+</div>
+    </div>
+  </div>
+          
+  <!-- Navigation -->
+  
+  <!--Nav-->
+  <ul class="nav justify-content-end navbar-dark" style="background-color:black">
+    <li class="nav-item mr-4">
+      <a class="nav-link" >
+        <p class="m-1 font-weight-bold text-white fs-14" routerLink="/entrar">Login</p></a>
+    </li>
+  
+    <li class="nav-item mr-4">
+      <a class="nav-link">
+        <p class="m-1 font-weight-bold text-white fs-14" routerLink="/cadastrar">Cadastre-se</p></a>
+    </li>
+  </ul>
+  <!--/Nav-->
+  </div>
 
+  <div>
             <ul class="navbar-nav ml-3">
               <li class="nav-item">
                 <a class="nav-link text-white fs-14" href="#">SEJA UM DESIGNER</a>
@@ -71,9 +95,8 @@
                 </li>
               </ul>
             </ul>
-          </ul>
         </div>
-      </div>
-    </nav>
-  </div>
-</div>
+      
+    
+  
+
