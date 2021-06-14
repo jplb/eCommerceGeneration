@@ -23,6 +23,7 @@ produto: Produto = new Produto
 categoria: Categoria = new Categoria
 listaCategoria: Categoria[]
 idCategoria:number
+pesquisa: string
 
 user: User = new User()
 nome = environment.nome
@@ -60,7 +61,11 @@ refresh2(idCat: number){
   })
 }
 
-
+atualizaBusca(){
+  this.router.navigateByUrl('/home', { skipLocationChange: true }).then(() =>{
+       this.router.navigate(["/pesquisa",this.pesquisa])
+  })
+}
 
 sair() {
   environment.token = ''
