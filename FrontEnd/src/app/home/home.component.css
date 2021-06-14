@@ -30,13 +30,12 @@ h2{
 border:none
   }
 
-   .carousel-item{
-    max-width: 100%;
- 
+  .carousel-item{
+      max-width: 100%;
   }
 
   img{
-    width: 900px;
+    align-items: center;
   }  
 
   * {
