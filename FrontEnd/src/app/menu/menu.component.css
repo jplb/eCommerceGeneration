@@ -8,9 +8,16 @@
 }
 
   .a{
-    font-family: "stayhome";
+    font-family: "caramella";
   }
 
-  nav{
+  .navbar{
     font-family: "caramella";
+  }
+
+  .menu{font-family: "caramella";}
+
+  input{
+    border-radius: 25px;
+    width: 300px;
   }
