@@ -20,6 +20,7 @@ import { BuscarComponent } from './buscar/buscar.component';
 import { MetodoPagamentoComponent } from './metodo-pagamento/metodo-pagamento.component';
 import { DesignerComponent } from './designer/designer.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { CategoriaComponent } from './categoria/categoria.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
     BuscarComponent,
     MetodoPagamentoComponent,
     DesignerComponent,
-    SobreNosComponent
+    SobreNosComponent,
+    CategoriaComponent
   ],
   imports: [
     BrowserModule,
