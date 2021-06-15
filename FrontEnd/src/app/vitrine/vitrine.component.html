@@ -6,203 +6,412 @@
     </div>
   </div>
 
+  <!--O que está comentado é para testes sem puxar do banco-->
+  <!-- PRIMEIRA LINHA DE CARDS -->
   <div class="row d-flex justify-content-center mt-5 mb-5 ml-2">
-    <!--DIV VITRINE-->
-    <!--O que está comentado é para testes sem puxar do banco-->
-    <!--<div class="col-md-3"> <!--*ngFor='let VerProduto of listaProdutos'>-->
-    <div class="col-md-3" *ngFor='let VerProduto of listaProdutos'>
-      <!--ESPAÇO COM A CAMISETA-->
-      <!--<div class="card" [routerLink]="['/ver-produto']"><!--, VerProduto.id]">-->
-      <div class="card" [routerLink]="['/ver-produto', VerProduto.id]">
-        <div class="d-flex justify-content-center">
-          <!--<img class="img-fluid"
-            src="https://static3.tcdn.com.br/img/img_prod/482157/180_camiseta_t_shirt_sisters_6828_1_cbd723c2f6b107cf0620e5576aaf3f00.jpg"
-            alt="" width="280px">-->
-          <img class="img-fluid" alt="Foto da camiseta" src="{{VerProduto.foto}}">
-        </div>
-        <div class="card-body text-center">
-          <!--<h4 class="nome">Girls Just Have Fun</h4>-->
-          <h4 class="nome">{{VerProduto.nome}}</h4>
-          <!--<small class="text-muted">Indie</small>-->
-          <small class="text-muted">{{VerProduto.tema}}</small>
-          <!--<p id="preco">R$ 89,90</p>-->
-          <p id="preco">{{VerProduto.preco.toFixed(2).replace('.', ',')}}</p>
-          <!--<a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>-->
-          <a class="btn btn-orange w-100" [routerLink]="['/ver-produto', VerProduto.id]">Ver Detalhes</a>
-        </div>
+
+    <!--PRIMEIRO CARD-->
+    <div class="col-md-3">
+      <!--*ngFor='let VerProduto of listaProdutos'>-->
+      <!--<div class="col-md-3" *ngFor='let VerProduto of listaProdutos'>      
+      <div class="card" [routerLink]="['/ver-produto']"><!--, VerProduto.id]">
+      <!--<div class="card" [routerLink]="['/ver-produto', VerProduto.id]">-->
+      <div class="d-flex justify-content-center">
+        <img class="img-fluid"
+          src="https://scontent.fgru5-1.fna.fbcdn.net/v/t1.6435-9/199732233_113188747654314_510224328771963887_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeHsC46XtSxJ6FrlGD3OoXW2g2-s0H259u2Db6zQfbn27VIZY8uQf6oJYDMquYMYqkEKH0HSphrNU8IjQUWNKud7&_nc_ohc=JY0P_glKfMYAX8v3oQd&_nc_ht=scontent.fgru5-1.fna&oh=a5bc06826df33ec60e127b6a537a5001&oe=60CC758E"
+          alt="" width="280px">
+        <!--<img class="img-fluid" alt="Foto da camiseta" src="{{VerProduto.foto}}">-->
+      </div>
+      <div class="card-body text-center">
+        <h4 class="nome">Women Fly</h4>
+        <!-- <h4 class="nome">{{VerProduto.nome}}</h4> -->
+        <small class="text-muted">Indie</small>
+        <!-- <small class="text-muted">{{VerProduto.tema}}</small> -->
+        <p id="preco">R$ 79,90</p>
+        <!-- <p id="preco">{{VerProduto.preco.toFixed(2).replace('.', ',')}}</p> -->
+        <a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
+        <!-- <a class="btn btn-orange w-100" [routerLink]="['/ver-produto', VerProduto.id]">Ver Detalhes</a> -->
       </div>
     </div>
-    <!--
+
+
+    <!--SEGUNDO CARD-->
     <div class="col-md-3">
-      <!--  <div class="col-md-3" *ngFor='let VerProduto of listaProdutos'>
-      <!--ESPAÇO COM A CAMISETA-->
-    <!--  <div class="card" [routerLink]="['/ver-produto']">
-        <!--<div class="card" [routerLink]="['/ver-produto'], VerProduto.id]">-->
-    <!--<div class="d-flex justify-content-center">
-          <img class="img-fluid"
-            src="https://static3.tcdn.com.br/img/img_prod/482157/180_camiseta_t_shirt_sisters_6828_1_cbd723c2f6b107cf0620e5576aaf3f00.jpg"
-            alt="" width="280px">
-          <!--<img class="img-fluid" alt="Imagem da camiseta" src="{{VerProduto.foto}}">-->
-    <!--</div>
-        <div class="card-body text-center">
-          <h4 class="nome">Girls Just Have Fun</h4>
-          <!--{{VerProduto.nome}}-->
-    <!--<small class="text-muted">Indie</small>
-          <!--{{VerProduto.tema}}-->
-    <!--<p id="preco">R$ 89,90</p>
-          <!--{{VerProduto.preco.toFixed(2).replace('.', ',')}}-->
-    <!--<a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
-          <!--", VerProduto.id]">Ver camiseta</a>-->
-    <!--</div>
+      <!--*ngFor='let VerProduto of listaProdutos'>-->
+      <!--<div class="col-md-3" *ngFor='let VerProduto of listaProdutos'>      
+      <div class="card" [routerLink]="['/ver-produto']"><!--, VerProduto.id]">
+      <!--<div class="card" [routerLink]="['/ver-produto', VerProduto.id]">-->
+      <div class="d-flex justify-content-center">
+        <img class="img-fluid"
+          src="https://static3.tcdn.com.br/img/img_prod/482157/180_camiseta_t_shirt_sisters_6828_1_cbd723c2f6b107cf0620e5576aaf3f00.jpg"
+          alt="" width="280px">
+        <!--<img class="img-fluid" alt="Foto da camiseta" src="{{VerProduto.foto}}">-->
+      </div>
+      <div class="card-body text-center">
+        <h4 class="nome">Girls Just Have Fun</h4>
+        <!-- <h4 class="nome">{{VerProduto.nome}}</h4> -->
+        <small class="text-muted">Indie</small>
+        <!-- <small class="text-muted">{{VerProduto.tema}}</small> -->
+        <p id="preco">R$ 89,90</p>
+        <!-- <p id="preco">{{VerProduto.preco.toFixed(2).replace('.', ',')}}</p> -->
+        <a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
+        <!-- <a class="btn btn-orange w-100" [routerLink]="['/ver-produto', VerProduto.id]">Ver Detalhes</a> -->
       </div>
     </div>
-    <!--
+
+
+    <!--TERCEIRO CARD-->
     <div class="col-md-3">
-      <!-- *ngFor='let VerProduto of listaProdutos'>-->
-    <!--ESPAÇO COM A CAMISETA-->
-    <!--     <div class="card" [routerLink]="['/ver-produto']">
-        <!--, VerProduto.id]">-->
-    <!--       <div class="d-flex justify-content-center">
-          <img class="img-fluid"
-            src="https://static3.tcdn.com.br/img/img_prod/482157/180_camiseta_t_shirt_sisters_6828_1_cbd723c2f6b107cf0620e5576aaf3f00.jpg"
-            alt="" width="280px">
-          <!--<img class="img-fluid" alt="Imagem da camiseta" src="{{VerProduto.foto}}">-->
-    <!--      </div>
-        <div class="card-body text-center">
-          <h4 class="nome">Girls Girls Girls</h4>
-          <!--{{VerProduto.nome}}-->
-    <!--        <small class="text-muted">Indie</small>
-          <!--{{VerProduto.tema}}-->
-    <!--        <p id="preco">R$ 10</p>
-          <!--{{VerProduto.preco.toFixed(2).replace('.', ',')}}-->
-    <!--       <a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
-          <!--", VerProduto.id]">Ver camiseta</a>-->
-    <!--        </div>
+      <!--*ngFor='let VerProduto of listaProdutos'>-->
+      <!--<div class="col-md-3" *ngFor='let VerProduto of listaProdutos'>      
+      <div class="card" [routerLink]="['/ver-produto']"><!--, VerProduto.id]">
+      <!--<div class="card" [routerLink]="['/ver-produto', VerProduto.id]">-->
+      <div class="d-flex justify-content-center">
+        <img class="img-fluid"
+          src="https://scontent.fgru5-1.fna.fbcdn.net/v/t1.6435-9/200313029_113188704320985_1857868368255805644_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeGDLSOU8CaaWz7icoi_-HLWEjCho2HQFfsSMKGjYdAV--hrzhCusRynagQJ34JwlPDhgZIQ4t757ay9Dr2wAow5&_nc_ohc=HM4XjAHy_14AX-oAmBK&_nc_ht=scontent.fgru5-1.fna&oh=c246c90fc58a0e1edb5413f632e0bdd2&oe=60CC4282"
+          alt="" width="280px">
+        <!--<img class="img-fluid" alt="Foto da camiseta" src="{{VerProduto.foto}}">-->
+      </div>
+      <div class="card-body text-center">
+        <h4 class="nome">Energy</h4>
+        <!-- <h4 class="nome">{{VerProduto.nome}}</h4> -->
+        <small class="text-muted">Indie</small>
+        <!-- <small class="text-muted">{{VerProduto.tema}}</small> -->
+        <p id="preco">R$ 69,90</p>
+        <!-- <p id="preco">{{VerProduto.preco.toFixed(2).replace('.', ',')}}</p> -->
+        <a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
+        <!-- <a class="btn btn-orange w-100" [routerLink]="['/ver-produto', VerProduto.id]">Ver Detalhes</a> -->
       </div>
     </div>
-  
+
+
+    <!--QUARTO CARD-->
     <div class="col-md-3">
-      <!-- *ngFor='let VerProduto of listaProdutos'>-->
-    <!--ESPAÇO COM A CAMISETA-->
-    <!--      <div class="card" [routerLink]="['/ver-produto']">
-        <!--, VerProduto.id]">-->
-    <!--        <div class="d-flex justify-content-center">
-          <img class="img-fluid"
-            src="https://static3.tcdn.com.br/img/img_prod/482157/180_camiseta_t_shirt_sisters_6828_1_cbd723c2f6b107cf0620e5576aaf3f00.jpg"
-            alt="" width="280px">
-          <!--<img class="img-fluid" alt="Imagem da camiseta" src="{{VerProduto.foto}}">-->
-    <!--    </div>
-        <div class="card-body text-center">
-          <h4 class="nome">I'm just a girl</h4>
-          <!--{{VerProduto.nome}}-->
-    <!--  <small class="text-muted">Indie</small>
-          <!--{{VerProduto.tema}}-->
-    <!--    <p id="preco">R$ 20</p>
-          <!--{{VerProduto.preco.toFixed(2).replace('.', ',')}}-->
-    <!--<a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
-          <!--", VerProduto.id]">Ver camiseta</a>-->
-    <!--  </div>
+      <!--*ngFor='let VerProduto of listaProdutos'>-->
+      <!--<div class="col-md-3" *ngFor='let VerProduto of listaProdutos'>      
+      <div class="card" [routerLink]="['/ver-produto']"><!--, VerProduto.id]">
+      <!--<div class="card" [routerLink]="['/ver-produto', VerProduto.id]">-->
+      <div class="d-flex justify-content-center">
+        <img class="img-fluid"
+          src="https://scontent.fgru5-1.fna.fbcdn.net/v/t1.6435-9/198323453_113188837654305_7871846376745247414_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeEdVX5TSEqBAzoDCgRuZ6Y7ua9LwbPmAp-5r0vBs-YCnxwHLNjg2aZAN1GD917qrAhcWsaP7GCwxQx6EEScnX0s&_nc_ohc=PliKt_Nlp_4AX-YmDsM&_nc_ht=scontent.fgru5-1.fna&oh=9a9b00bb9f6d3ff123cfcc3dfe8fcf04&oe=60CC3D94"
+          alt="" width="280px">
+        <!--<img class="img-fluid" alt="Foto da camiseta" src="{{VerProduto.foto}}">-->
+      </div>
+      <div class="card-body text-center">
+        <h4 class="nome">Be Cool</h4>
+        <!-- <h4 class="nome">{{VerProduto.nome}}</h4> -->
+        <small class="text-muted">Indie</small>
+        <!-- <small class="text-muted">{{VerProduto.tema}}</small> -->
+        <p id="preco">R$ 74,90</p>
+        <!-- <p id="preco">{{VerProduto.preco.toFixed(2).replace('.', ',')}}</p> -->
+        <a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
+        <!-- <a class="btn btn-orange w-100" [routerLink]="['/ver-produto', VerProduto.id]">Ver Detalhes</a> -->
       </div>
     </div>
   </div>
 
   <div class="row d-flex justify-content-center mt-5 mb-5 ml-2">
-    <!--DIV VITRINE-->
-    <!--
+    <!--PRIMEIRO CARD-->
     <div class="col-md-3">
-      <!-- *ngFor='let VerProduto of listaProdutos'>-->
-    <!--ESPAÇO COM A CAMISETA-->
-    <!--  <div class="card" [routerLink]="['/ver-produto']">
-        <!--, VerProduto.id]">-->
-    <!--<div class="d-flex justify-content-center">
-          <img class="img-fluid"
-            src="https://static3.tcdn.com.br/img/img_prod/482157/180_camiseta_t_shirt_sisters_6828_1_cbd723c2f6b107cf0620e5576aaf3f00.jpg"
-            alt="" width="280px">
-          <!--<img class="img-fluid" alt="Imagem da camiseta" src="{{VerProduto.foto}}">-->
-    <!--</div>
-        <div class="card-body text-center">
-          <h4 class="nome">Nome</h4>
-          <!--{{VerProduto.nome}}-->
-    <!--<small class="text-muted">Tema</small>
-          <!--{{VerProduto.tema}}-->
-    <!--     <p id="preco">R$ 10</p>
-          <!--{{VerProduto.preco.toFixed(2).replace('.', ',')}}-->
-    <!-- <a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
-          <!--", VerProduto.id]">Ver camiseta</a>-->
-    <!--       </div>
+      <!--*ngFor='let VerProduto of listaProdutos'>-->
+      <!--<div class="col-md-3" *ngFor='let VerProduto of listaProdutos'>      
+      <div class="card" [routerLink]="['/ver-produto']"><!--, VerProduto.id]">
+      <!--<div class="card" [routerLink]="['/ver-produto', VerProduto.id]">-->
+      <div class="d-flex justify-content-center">
+        <img class="img-fluid"
+          src="https://scontent.fgru5-1.fna.fbcdn.net/v/t1.6435-9/199205324_113188890987633_3618825718033036984_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeGJXR1JRVPDIcu7KuOUCWs_h4LbVLArr0eHgttUsCuvR5wu2OnookuglAHdO77pOZunImGs6R_iI4PnDe2SXc0S&_nc_ohc=BUV7ZecUM3UAX9jw55k&_nc_ht=scontent.fgru5-1.fna&oh=43c6192f7549000f4fe4e116f46b29e8&oe=60CB8B70"
+          alt="" width="280px">
+        <!--<img class="img-fluid" alt="Foto da camiseta" src="{{VerProduto.foto}}">-->
+      </div>
+      <div class="card-body text-center">
+        <h4 class="nome">Poison</h4>
+        <!-- <h4 class="nome">{{VerProduto.nome}}</h4> -->
+        <small class="text-muted">Indie</small>
+        <!-- <small class="text-muted">{{VerProduto.tema}}</small> -->
+        <p id="preco">R$ 73,90</p>
+        <!-- <p id="preco">{{VerProduto.preco.toFixed(2).replace('.', ',')}}</p> -->
+        <a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
+        <!-- <a class="btn btn-orange w-100" [routerLink]="['/ver-produto', VerProduto.id]">Ver Detalhes</a> -->
       </div>
     </div>
 
+
+    <!--SEGUNDO CARD-->
     <div class="col-md-3">
-      <!-- *ngFor='let VerProduto of listaProdutos'>-->
-    <!--ESPAÇO COM A CAMISETA-->
-    <!-- <div class="card" [routerLink]="['/ver-produto']">
-        <!--, VerProduto.id]">-->
-    <!--<div class="d-flex justify-content-center">
-          <img class="img-fluid"
-            src="https://static3.tcdn.com.br/img/img_prod/482157/180_camiseta_t_shirt_sisters_6828_1_cbd723c2f6b107cf0620e5576aaf3f00.jpg"
-            alt="" width="280px">
-          <!--<img class="img-fluid" alt="Imagem da camiseta" src="{{VerProduto.foto}}">-->
-    <!-- </div>
-        <div class="card-body text-center">
-          <h4 class="nome">Nome</h4>
-          <!--{{VerProduto.nome}}-->
-    <!--<small class="text-muted">Tema</small>
-          <!--{{VerProduto.tema}}-->
-    <!-- <p id="preco">R$ 10</p>
-          <!--{{VerProduto.preco.toFixed(2).replace('.', ',')}}-->
-    <!--<a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
-          <!--", VerProduto.id]">Ver camiseta</a>-->
-    <!--</div>
+      <!--*ngFor='let VerProduto of listaProdutos'>-->
+      <!--<div class="col-md-3" *ngFor='let VerProduto of listaProdutos'>      
+      <div class="card" [routerLink]="['/ver-produto']"><!--, VerProduto.id]">
+      <!--<div class="card" [routerLink]="['/ver-produto', VerProduto.id]">-->
+      <div class="d-flex justify-content-center">
+        <img class="img-fluid"
+          src="https://scontent.fgru5-1.fna.fbcdn.net/v/t1.6435-9/198061962_113190140987508_1478321803612844533_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeFGabjTIAlTkXitY4QtlPyBTmEO7jcRHJdOYQ7uNxEcl5_2eEjN8gLI8tH2A8Ojy9iwTuU7cOT62Accemagy59u&_nc_ohc=1y3RfIrPsD0AX_jDeNN&_nc_oc=AQnKHKM0r4xgEzwFlqDub1xcszJ49sIPhw_bjwlOhwVHIT6QKYNIGh0--bwWYKa2QpI&tn=ujOaSvDAvR7NbCE1&_nc_ht=scontent.fgru5-1.fna&oh=e5584b89d6eda68f480992939c7bd55c&oe=60CCC746"
+          alt="" width="280px">
+        <!--<img class="img-fluid" alt="Foto da camiseta" src="{{VerProduto.foto}}">-->
+      </div>
+      <div class="card-body text-center">
+        <h4 class="nome">Viva La Vulva</h4>
+        <!-- <h4 class="nome">{{VerProduto.nome}}</h4> -->
+        <small class="text-muted">Indie</small>
+        <!-- <small class="text-muted">{{VerProduto.tema}}</small> -->
+        <p id="preco">R$ 79,90</p>
+        <!-- <p id="preco">{{VerProduto.preco.toFixed(2).replace('.', ',')}}</p> -->
+        <a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
+        <!-- <a class="btn btn-orange w-100" [routerLink]="['/ver-produto', VerProduto.id]">Ver Detalhes</a> -->
       </div>
     </div>
 
+
+    <!--TERCEIRO CARD-->
     <div class="col-md-3">
-      <!-- *ngFor='let VerProduto of listaProdutos'>-->
-    <!--ESPAÇO COM A CAMISETA-->
-    <!--<div class="card" [routerLink]="['/ver-produto']">
-        <!--, VerProduto.id]">-->
-    <!--<div class="d-flex justify-content-center">
-          <img class="img-fluid"
-            src="https://static3.tcdn.com.br/img/img_prod/482157/180_camiseta_t_shirt_sisters_6828_1_cbd723c2f6b107cf0620e5576aaf3f00.jpg"
-            alt="" width="280px">
-          <!--<img class="img-fluid" alt="Imagem da camiseta" src="{{VerProduto.foto}}">-->
-    <!-- </div>
-        <div class="card-body text-center">
-          <h4 class="nome">Nome</h4>
-          <!--{{VerProduto.nome}}-->
-    <!-- <small class="text-muted">Tema</small>
-          <!--{{VerProduto.tema}}-->
-    <!-- <p id="preco">R$ 10</p>
-          <!--{{VerProduto.preco.toFixed(2).replace('.', ',')}}-->
-    <!--  <a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
-          <!--", VerProduto.id]">Ver camiseta</a>-->
-    <!-- </div>
+      <!--*ngFor='let VerProduto of listaProdutos'>-->
+      <!--<div class="col-md-3" *ngFor='let VerProduto of listaProdutos'>      
+      <div class="card" [routerLink]="['/ver-produto']"><!--, VerProduto.id]">
+      <!--<div class="card" [routerLink]="['/ver-produto', VerProduto.id]">-->
+      <div class="d-flex justify-content-center">
+        <img class="img-fluid"
+          src="https://scontent.fgru5-1.fna.fbcdn.net/v/t1.6435-9/198309428_113189087654280_6251049241704221757_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeEmyDljceakzXRBxJFa0KC3Zq-zNMiI9Nhmr7M0yIj02GW8maqOqEgxR6uwog_U0tWanxjJdUovwNJ1oPhiQ70p&_nc_ohc=QzlM_YgE8XYAX_3N3aZ&_nc_ht=scontent.fgru5-1.fna&oh=6f1518746d6f7eac4ceb8ea1d3dbd23c&oe=60CCE729"
+          alt="" width="280px">
+        <!--<img class="img-fluid" alt="Foto da camiseta" src="{{VerProduto.foto}}">-->
+      </div>
+      <div class="card-body text-center">
+        <h4 class="nome">Butterfly</h4>
+        <!-- <h4 class="nome">{{VerProduto.nome}}</h4> -->
+        <small class="text-muted">Indie</small>
+        <!-- <small class="text-muted">{{VerProduto.tema}}</small> -->
+        <p id="preco">R$ 81,90</p>
+        <!-- <p id="preco">{{VerProduto.preco.toFixed(2).replace('.', ',')}}</p> -->
+        <a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
+        <!-- <a class="btn btn-orange w-100" [routerLink]="['/ver-produto', VerProduto.id]">Ver Detalhes</a> -->
       </div>
     </div>
 
+
+    <!--QUARTO CARD-->
     <div class="col-md-3">
-      <!-- *ngFor='let VerProduto of listaProdutos'>-->
-    <!--ESPAÇO COM A CAMISETA-->
-    <!--<div class="card" [routerLink]="['/ver-produto']">
-        <!--, VerProduto.id]">-->
-    <!--<div class="d-flex justify-content-center">
-          <img class="img-fluid"
-            src="https://static3.tcdn.com.br/img/img_prod/482157/180_camiseta_t_shirt_sisters_6828_1_cbd723c2f6b107cf0620e5576aaf3f00.jpg"
-            alt="" width="280px">
-          <!--<img class="img-fluid" alt="Imagem da camiseta" src="{{VerProduto.foto}}">-->
-    <!--</div>
-        <div class="card-body text-center">
-          <h4 class="nome">Nome</h4>
-          <!--{{VerProduto.nome}}-->
-    <!--<small class="text-muted">Tema</small>
-          <!--{{VerProduto.tema}}-->
-    <!--<p id="preco">R$ 10</p>
-          <!--{{VerProduto.preco.toFixed(2).replace('.', ',')}}-->
-    <!--<a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
-          <!--", VerProduto.id]">Ver camiseta</a>-->
+      <!--*ngFor='let VerProduto of listaProdutos'>-->
+      <!--<div class="col-md-3" *ngFor='let VerProduto of listaProdutos'>      
+      <div class="card" [routerLink]="['/ver-produto']"><!--, VerProduto.id]">
+      <!--<div class="card" [routerLink]="['/ver-produto', VerProduto.id]">-->
+      <div class="d-flex justify-content-center">
+        <img class="img-fluid"
+          src="https://scontent.fgru5-1.fna.fbcdn.net/v/t1.6435-9/198426291_113189104320945_7779008378054612405_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeFkeBr2QLbgmn9WgjkvijsAd0ZeLWbjlGV3Rl4tZuOUZeS1l0s-Ohvo-CCaI7fIuhZru7ammWl67GlYfmwXkDzr&_nc_ohc=qxHQWx4bxW8AX96v5ll&tn=ujOaSvDAvR7NbCE1&_nc_ht=scontent.fgru5-1.fna&oh=4601e7046c36c66386dbaa3069fe5a25&oe=60CD1EE4"
+          alt="" width="280px">
+        <!--<img class="img-fluid" alt="Foto da camiseta" src="{{VerProduto.foto}}">-->
+      </div>
+      <div class="card-body text-center">
+        <h4 class="nome">Witches</h4>
+        <!-- <h4 class="nome">{{VerProduto.nome}}</h4> -->
+        <small class="text-muted">Indie</small>
+        <!-- <small class="text-muted">{{VerProduto.tema}}</small> -->
+        <p id="preco">R$ 77,90</p>
+        <!-- <p id="preco">{{VerProduto.preco.toFixed(2).replace('.', ',')}}</p> -->
+        <a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
+        <!-- <a class="btn btn-orange w-100" [routerLink]="['/ver-produto', VerProduto.id]">Ver Detalhes</a> -->
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row d-flex justify-content-center mt-5 mb-5 ml-2">
+
+    <!--PRIMEIRO CARD-->
+    <div class="col-md-3">
+      <!--*ngFor='let VerProduto of listaProdutos'>-->
+      <!--<div class="col-md-3" *ngFor='let VerProduto of listaProdutos'>      
+    <div class="card" [routerLink]="['/ver-produto']"><!--, VerProduto.id]">
+    <!--<div class="card" [routerLink]="['/ver-produto', VerProduto.id]">-->
+      <div class="d-flex justify-content-center">
+        <img class="img-fluid"
+          src="https://scontent.fgru5-1.fna.fbcdn.net/v/t1.6435-9/197898389_113189247654264_3123500327844902377_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeFQvErK-XMYYjsC-k0QT1F2ERHCWJoYMy8REcJYmhgzL_x3_486epNF8bMYNkDLRUhAUg2_HaypeMKhU81ox5z6&_nc_ohc=K-nyxe4Qj5cAX9kjd1j&tn=ujOaSvDAvR7NbCE1&_nc_ht=scontent.fgru5-1.fna&oh=0707edaf3017ca96c95a69ddb301b915&oe=60CD46A4"
+          alt="" width="280px">
+        <!--<img class="img-fluid" alt="Foto da camiseta" src="{{VerProduto.foto}}">-->
+      </div>
+      <div class="card-body text-center">
+        <h4 class="nome">Moon Cats</h4>
+        <!-- <h4 class="nome">{{VerProduto.nome}}</h4> -->
+        <small class="text-muted">Indie</small>
+        <!-- <small class="text-muted">{{VerProduto.tema}}</small> -->
+        <p id="preco">R$ 76,90</p>
+        <!-- <p id="preco">{{VerProduto.preco.toFixed(2).replace('.', ',')}}</p> -->
+        <a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
+        <!-- <a class="btn btn-orange w-100" [routerLink]="['/ver-produto', VerProduto.id]">Ver Detalhes</a> -->
+      </div>
+    </div>
+
+
+    <!--SEGUNDO CARD-->
+    <div class="col-md-3">
+      <!--*ngFor='let VerProduto of listaProdutos'>-->
+      <!--<div class="col-md-3" *ngFor='let VerProduto of listaProdutos'>      
+    <div class="card" [routerLink]="['/ver-produto']"><!--, VerProduto.id]">
+    <!--<div class="card" [routerLink]="['/ver-produto', VerProduto.id]">-->
+      <div class="d-flex justify-content-center">
+        <img class="img-fluid"
+          src="https://scontent.fgru5-1.fna.fbcdn.net/v/t1.6435-9/200312020_113189337654255_1390400040481371252_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeFIxMfj1FO-TnH1gsAad_-M0kzVL6I0wCDSTNUvojTAIIZlK-ICIGcm98GUkCaUHSP6M3WEKOjxdQf5x7HgjL04&_nc_ohc=TJqUEDNx9VUAX89X6cx&_nc_ht=scontent.fgru5-1.fna&oh=f47abc538f1a02d4c6ecc9fcd9cbc2ad&oe=60CB9A27"
+          alt="" width="280px">
+        <!--<img class="img-fluid" alt="Foto da camiseta" src="{{VerProduto.foto}}">-->
+      </div>
+      <div class="card-body text-center">
+        <h4 class="nome">The Window</h4>
+        <!-- <h4 class="nome">{{VerProduto.nome}}</h4> -->
+        <small class="text-muted">Indie</small>
+        <!-- <small class="text-muted">{{VerProduto.tema}}</small> -->
+        <p id="preco">R$ 69,90</p>
+        <!-- <p id="preco">{{VerProduto.preco.toFixed(2).replace('.', ',')}}</p> -->
+        <a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
+        <!-- <a class="btn btn-orange w-100" [routerLink]="['/ver-produto', VerProduto.id]">Ver Detalhes</a> -->
+      </div>
+    </div>
+
+
+    <!--TERCEIRO CARD-->
+    <div class="col-md-3">
+      <!--*ngFor='let VerProduto of listaProdutos'>-->
+      <!--<div class="col-md-3" *ngFor='let VerProduto of listaProdutos'>      
+    <div class="card" [routerLink]="['/ver-produto']"><!--, VerProduto.id]">
+    <!--<div class="card" [routerLink]="['/ver-produto', VerProduto.id]">-->
+      <div class="d-flex justify-content-center">
+        <img class="img-fluid"
+          src="https://scontent.fgru5-1.fna.fbcdn.net/v/t1.6435-9/198289221_113190090987513_5430411915736902988_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeEZrD2gOAxgdwhOrnjOG5gy87AnPDi1bg_zsCc8OLVuD4WxGF_s_G0Zpzckt0qoAbO-WagqZNyAUuFRJsJ8xNbM&_nc_ohc=briSe1y3pxwAX9-Yy6Y&_nc_ht=scontent.fgru5-1.fna&oh=5a0d6435aab8de89fe6f3b956ea5158b&oe=60CC021C"
+          alt="" width="280px">
+        <!--<img class="img-fluid" alt="Foto da camiseta" src="{{VerProduto.foto}}">-->
+      </div>
+      <div class="card-body text-center">
+        <h4 class="nome">Mouth</h4>
+        <!-- <h4 class="nome">{{VerProduto.nome}}</h4> -->
+        <small class="text-muted">Indie</small>
+        <!-- <small class="text-muted">{{VerProduto.tema}}</small> --> 
+        <p id="preco">R$ 78,90</p>
+        <!-- <p id="preco">{{VerProduto.preco.toFixed(2).replace('.', ',')}}</p> -->
+        <a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
+        <!-- <a class="btn btn-orange w-100" [routerLink]="['/ver-produto', VerProduto.id]">Ver Detalhes</a> -->
+      </div>
+    </div>
+
+
+    <!--QUARTO CARD-->
+    <div class="col-md-3">
+      <!--*ngFor='let VerProduto of listaProdutos'>-->
+      <!--<div class="col-md-3" *ngFor='let VerProduto of listaProdutos'>      
+    <div class="card" [routerLink]="['/ver-produto']"><!--, VerProduto.id]">
+    <!--<div class="card" [routerLink]="['/ver-produto', VerProduto.id]">-->
+      <div class="d-flex justify-content-center">
+        <img class="img-fluid"
+          src="https://scontent.fgru5-1.fna.fbcdn.net/v/t1.6435-9/201138741_113190097654179_4601019291621702785_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeG0ZOe4wZwxH2gxAsMRLbNXcsjpGknWCfpyyOkaSdYJ-tbJBQP_TUIBM0jKTbbvS6RqIM9IALc6tA2iMTX3y0c1&_nc_ohc=ReIvE504Fm0AX_1sd6q&_nc_ht=scontent.fgru5-1.fna&oh=f74938a9b4853e3a23737e5a707212ed&oe=60CB83AA"
+          alt="" width="280px">
+        <!--<img class="img-fluid" alt="Foto da camiseta" src="{{VerProduto.foto}}">-->
+      </div>
+      <div class="card-body text-center">
+        <h4 class="nome">Octopus</h4>
+        <!-- <h4 class="nome">{{VerProduto.nome}}</h4> -->
+        <small class="text-muted">Indie</small>
+        <!-- <small class="text-muted">{{VerProduto.tema}}</small> --> 
+        <p id="preco">R$ 89,90</p>
+        <!-- <p id="preco">{{VerProduto.preco.toFixed(2).replace('.', ',')}}</p> -->
+        <a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
+        <!-- <a class="btn btn-orange w-100" [routerLink]="['/ver-produto', VerProduto.id]">Ver Detalhes</a> -->
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row d-flex justify-content-center mt-5 mb-5 ml-2">
+    <!--PRIMEIRO CARD-->
+    <div class="col-md-3">
+      <!--*ngFor='let VerProduto of listaProdutos'>-->
+      <!--<div class="col-md-3" *ngFor='let VerProduto of listaProdutos'>      
+    <div class="card" [routerLink]="['/ver-produto']"><!--, VerProduto.id]">
+    <!--<div class="card" [routerLink]="['/ver-produto', VerProduto.id]">-->
+      <div class="d-flex justify-content-center">
+        <img class="img-fluid"
+          src="https://scontent.fgru5-1.fna.fbcdn.net/v/t1.6435-9/198712478_113190190987503_4766432389712460512_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeHu6hJXVRrIsiDXSE0Bax0p4OAy3drpY_Pg4DLd2ulj81s_6dXbwG50ZTkhYldv8Nki2JsHOVT-969uOCw-hTQp&_nc_ohc=Fb4ZxVxz4yMAX8BG7T-&_nc_ht=scontent.fgru5-1.fna&oh=817e8d9ec54fe0604afba89bd6912f7e&oe=60CBC4E7"
+          alt="" width="280px">
+        <!--<img class="img-fluid" alt="Foto da camiseta" src="{{VerProduto.foto}}">-->
+      </div>
+      <div class="card-body text-center">
+        <h4 class="nome">Woman & Art</h4>
+        <!-- <h4 class="nome">{{VerProduto.nome}}</h4> -->
+        <small class="text-muted">Indie</small>
+        <!-- <small class="text-muted">{{VerProduto.tema}}</small> -->
+        <p id="preco">R$ 80,90</p>
+        <!-- <p id="preco">{{VerProduto.preco.toFixed(2).replace('.', ',')}}</p> -->
+        <a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
+        <!-- <a class="btn btn-orange w-100" [routerLink]="['/ver-produto', VerProduto.id]">Ver Detalhes</a> -->
+      </div>
+    </div>
+
+    <!--SEGUNDO CARD-->
+    <div class="col-md-3">
+      <!--*ngFor='let VerProduto of listaProdutos'>-->
+      <!--<div class="col-md-3" *ngFor='let VerProduto of listaProdutos'>      
+    <div class="card" [routerLink]="['/ver-produto']"><!--, VerProduto.id]">
+    <!--<div class="card" [routerLink]="['/ver-produto', VerProduto.id]">-->
+      <div class="d-flex justify-content-center">
+        <img class="img-fluid"
+          src="https://scontent.fgru5-1.fna.fbcdn.net/v/t1.6435-9/199990413_113190340987488_8798358939136859682_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeEZyGQcczElQo9bFd9uLHpLYW3Y-jgh4l1hbdj6OCHiXYnQps6QCh_QTinGXrTcnMZmGVOf-ptqa2hZG8auM7Ni&_nc_ohc=V0n_cD5K4y0AX-Et2Tk&tn=ujOaSvDAvR7NbCE1&_nc_ht=scontent.fgru5-1.fna&oh=e30599d6d059b75d7aa3b6221f581bc6&oe=60CC72C5"
+          alt="" width="280px">
+        <!--<img class="img-fluid" alt="Foto da camiseta" src="{{VerProduto.foto}}">-->
+      </div>
+      <div class="card-body text-center">
+        <h4 class="nome">Hypnotize</h4>
+        <!-- <h4 class="nome">{{VerProduto.nome}}</h4> -->
+        <small class="text-muted">Indie</small>
+        <!-- <small class="text-muted">{{VerProduto.tema}}</small> --> -->
+        <p id="preco">R$ 69,90</p>
+        <!-- <p id="preco">{{VerProduto.preco.toFixed(2).replace('.', ',')}}</p> -->
+        <a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
+        <!-- <a class="btn btn-orange w-100" [routerLink]="['/ver-produto', VerProduto.id]">Ver Detalhes</a> -->
+      </div>
+    </div>
+
+
+    <!--TERCEIRO CARD-->
+    <div class="col-md-3">
+      <!--*ngFor='let VerProduto of listaProdutos'>-->
+      <!--<div class="col-md-3" *ngFor='let VerProduto of listaProdutos'>      
+    <div class="card" [routerLink]="['/ver-produto']"><!--, VerProduto.id]">
+    <!--<div class="card" [routerLink]="['/ver-produto', VerProduto.id]">-->
+      <div class="d-flex justify-content-center">
+        <img class="img-fluid"
+          src="https://scontent.fgru5-1.fna.fbcdn.net/v/t1.6435-9/198431109_113190360987486_262124096652213749_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeEcu9icdoxY-3HB59aT7xt6Y3g7b8ffsoBjeDtvx9-ygME3QHUzKfZv9PUxecy6rdDk1VBkFhHd_oi6UpVWurYI&_nc_ohc=VBotIP-5M3wAX-Jf6Vi&_nc_ht=scontent.fgru5-1.fna&oh=570c166136efe6b228a7029d54edb4d7&oe=60CB9FF1"
+          alt="" width="280px">
+        <!--<img class="img-fluid" alt="Foto da camiseta" src="{{VerProduto.foto}}">-->
+      </div>
+      <div class="card-body text-center">
+        <h4 class="nome">Drama Queen</h4>
+        <!-- <h4 class="nome">{{VerProduto.nome}}</h4> -->
+        <small class="text-muted">Indie</small>
+        <!-- <small class="text-muted">{{VerProduto.tema}}</small> --> -->
+        <p id="preco">R$ 82,90</p>
+        <!-- <p id="preco">{{VerProduto.preco.toFixed(2).replace('.', ',')}}</p> -->
+        <a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
+        <!-- <a class="btn btn-orange w-100" [routerLink]="['/ver-produto', VerProduto.id]">Ver Detalhes</a> -->
+      </div>
+    </div>
+
+
+    <!--QUARTO CARD-->
+    <div class="col-md-3">
+      <!--*ngFor='let VerProduto of listaProdutos'>-->
+      <!--<div class="col-md-3" *ngFor='let VerProduto of listaProdutos'>      
+    <div class="card" [routerLink]="['/ver-produto']"><!--, VerProduto.id]">
+    <!--<div class="card" [routerLink]="['/ver-produto', VerProduto.id]">-->
+      <div class="d-flex justify-content-center">
+        <img class="img-fluid"
+          src="https://scontent.fgru5-1.fna.fbcdn.net/v/t1.6435-9/197776627_113189290987593_8493151930235179735_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeGMuR2bVSr7aSeOcvQLDhj923X-bi1i_qTbdf5uLWL-pDm1Dhu-5DtvEsPK3IwoQWuHdXu_SM9GdjQxxkwY7BDO&_nc_ohc=MnZhsBMbuS0AX9G_3IY&_nc_ht=scontent.fgru5-1.fna&oh=191035bb223c664115e8d237bbfff41c&oe=60CBE2FF"
+          alt="" width="280px">
+        <!--<img class="img-fluid" alt="Foto da camiseta" src="{{VerProduto.foto}}">-->
+      </div>
+      <div class="card-body text-center">
+        <h4 class="nome">Sunrise</h4>
+        <!-- <h4 class="nome">{{VerProduto.nome}}</h4> -->
+        <small class="text-muted">Indie</small>
+        <!-- <small class="text-muted">{{VerProduto.tema}}</small> -->
+        <p id="preco">R$ 74,90</p>
+        <!-- <p id="preco">{{VerProduto.preco.toFixed(2).replace('.', ',')}}</p> -->
+        <a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>
+        <!-- <a class="btn btn-orange w-100" [routerLink]="['/ver-produto', VerProduto.id]">Ver Detalhes</a> -->
+      </div>
+    </div>
   </div>
 </div>
-<!--</div>
-</div>
-</div>-->
