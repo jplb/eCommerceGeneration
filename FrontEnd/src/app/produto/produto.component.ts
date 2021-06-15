@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
+import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 
 @Component({
@@ -14,11 +16,18 @@ export class ProdutoComponent implements OnInit {
   produto: Produto = new Produto()
   listaProdutos: Produto[]
 
+  temaCategoria: String
+  categoria: Categoria = new Categoria()
+  listaCategoria: Categoria[]
+  idCategoria: number
+
   constructor(
 
 
     private router: Router,
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
+    private categoriaService: CategoriaService
+
   ) { }
 
   ngOnInit() {
@@ -28,12 +37,16 @@ export class ProdutoComponent implements OnInit {
       this.router.navigate(['/entrar'])
     }
     this.findAllProdutos()
+    this.getAllCategoria()
+    console.log(this.idCategoria)
   }
 
   findAllProdutos() {
     this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
       this.listaProdutos = resp
     })
+
+    
   }
 
   cadastrar() {
@@ -45,4 +58,23 @@ export class ProdutoComponent implements OnInit {
     })
 
   }
+
+  findByTemaCategoria() {
+    this.categoriaService.getByTemaCategoria(this.temaCategoria).subscribe((resp: Categoria) => {
+      this.categoria = resp
+    })
+  }
+
+  findByIdCategoria(){
+    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
+      this.categoria = resp
+    })
+  }
+
+  getAllCategoria() {
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
+      this.listaCategoria = resp
+    })
+  }
+
 }
