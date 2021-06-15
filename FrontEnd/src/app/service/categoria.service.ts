@@ -21,15 +21,15 @@ export class CategoriaService {
   
 
   getByIdCategoria(id: number): Observable<Categoria>{
-    return this.http.get<Categoria>(`https://hw-tshirts.herokuapp.com/${id}`)
+    return this.http.get<Categoria>(`http://localhost:8080/categoria/${id}`)
   }
 
   getAllCategoria(): Observable<Categoria[]>{
-    return this.http.get<Categoria[]>('https://hw-tshirts.herokuapp.com/categoria')
+    return this.http.get<Categoria[]>('http://localhost:8080/categoria')
   }
 
   getByTemaCategoria(temaCategoria: String): Observable<Categoria>{
-    return this.http.get<Categoria>('https://hw-tshirts.herokuapp.com/categoria/tema')
+    return this.http.get<Categoria>('http://localhost:8080/categoria/tema')
 }
 
 
