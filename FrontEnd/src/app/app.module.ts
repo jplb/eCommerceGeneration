@@ -21,6 +21,7 @@ import { MetodoPagamentoComponent } from './metodo-pagamento/metodo-pagamento.co
 import { DesignerComponent } from './designer/designer.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { CategoriaComponent } from './categoria/categoria.component';
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { CategoriaComponent } from './categoria/categoria.component';
     MetodoPagamentoComponent,
     DesignerComponent,
     SobreNosComponent,
-    CategoriaComponent
+    CategoriaComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,

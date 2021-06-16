@@ -11,23 +11,14 @@
         </ul>
       </div>
 
-      <!-- Busca -->
-      <form class="form-inline">
-        <div id="divBusca">
-          <input [(ngModel)]="pesquisa" name="pesquisa" type="search" id="txtBusca"
-            placeholder="  Digite aqui o que procura..." />
-          <button class="btn btn-white" type="submit" id="cor" (click)="atualizaBusca()">
-            <i id="cor" class="fa fa-search" aria-hidden="true"></i>
-          </button>
-        </div>
-      </form>
+     
 
       <div class="navbar navbar-expand-sm d-flex justify-items-center">
 
         <div class="navbar-collapse collapse w-0 order-3 dual-collapse2 ">
           <ul class="navbar-nav ml-1">
             <li class="nav-item hoover">
-              <a  class="navbar-collapse collapse w-0 text-white fs-14 hoover" routerLink='/home'>HOME</a>
+              <a class="navbar-collapse collapse w-0 text-white fs-14 hoover" routerLink='/home'>HOME</a>
             </li>
           </ul>
 
@@ -38,7 +29,8 @@
                 VITRINE
               </a>
               <div class="dropdown-menu hoover2" aria-labelledby="dropdownMenuLink">
-                <a *ngFor='let item of listaCategoria' class="dropdown-item " (click)="refresh2(item.id)" value="" [routerLink]="['/categoria',item.id]">{{item.tema}}</a>
+                <a *ngFor='let item of listaCategoria' class="dropdown-item " (click)="refresh2(item.id)" value=""
+                  [routerLink]="['/categoria',item.id]">{{item.tema}}</a>
                 <!-- <a class="dropdown-item" [routerLink]="['/vitrine']">INDIE</a>
                 <a class="dropdown-item" href="">FILMES</a>
                 <a class="dropdown-item" href="">MUSICAS</a>
@@ -61,26 +53,32 @@
                 <li class="nav-item hoover">
                   <a class="nav-link text-white fs-14" routerLink='/sobre-nos'>SOBRE NÓS</a>
                 </li>
-                <!--<ul class="navbar-nav ml-5">
+
+                <ul class="navbar-nav ml-2 ml-5">
+                  <li class="nav-item hoover">
+                    <a class="nav-link text-white fs-14" routerLink='/sobre-nos' [routerLink]="['/user-edit', id]" *ngIf='authService.logado()'>Olá, {{nome}}</a>
+                  </li>
+                  <!--<ul class="navbar-nav ml-5">
                   <li class="nav-item">
                     <a class="nav-link text-white fs-14" href="#">AJUDA</a>
                   </li>
                 </ul>-->
-                <li class="nav-item mr-3 ml-3 hoover">
-                  <a class="nav-link">
-                    <a class="m-1 text-white fs-14" routerLink="/entrar">
-                      <i class="fa fa-user" aria-hidden="true"></i>
+                  <li class="nav-item mr-3 ml-3 hoover">
+                    <a class="nav-link">
+                      <a *ngIf='authService.logado()== false' class="m-1 text-white fs-14" routerLink="/entrar">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                      </a>
                     </a>
-                  </a>
-                </li>
-                <li class="nav-item hoover">
-                  <a class="nav-link">
-                    <a class=" text-white fs-14" routerLink="/pedido">
-                      <i class="fa fa-shopping-cart" aria-hidden="true">
-                      </i>
+                  </li>
+                  <li class="nav-item hoover">
+                    <a class="nav-link">
+                      <a class=" text-white fs-14" routerLink="/pedido">
+                        <i class="fa fa-shopping-cart" aria-hidden="true">
+                        </i>
+                      </a>
                     </a>
-                  </a>
-                </li>
+                  </li>
+                </ul>
               </ul>
             </ul>
           </ul>
