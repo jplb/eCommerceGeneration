@@ -12,9 +12,23 @@
     font-family: "caramella";
   }
 
+  
+
   .menu{
     width: 100%;
   }
+
+  
+
+  .hoover :hover {
+    background-color: orangered;
+  }
+
+  .hoover2 :hover {
+    font-weight: bold;
+  }
+
+
 
   input{
     border-radius: 25px;
