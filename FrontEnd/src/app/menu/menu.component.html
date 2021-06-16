@@ -39,16 +39,18 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <a *ngFor='let item of listaCategoria' class="dropdown-item" (click)="refresh2(item.id)" value="" [routerLink]="['/categoria',item.id]">{{item.tema}}</a>
-                <a class="dropdown-item" [routerLink]="['/vitrine']">INDIE</a>
-                <a class="dropdown-item" href="">FILMES</a>
-                <a class="dropdown-item" href="">MUSICAS</a>
-                <a class="dropdown-item" href="">SIGNOS</a>
-                <a class="dropdown-item" href="">FRASES</a>
-                <a class="dropdown-item" href="">TEMAS DIVERSOS</a>
+
               </div>
             </div>
 
+            
+
             <ul class="navbar-nav ml-1">
+
+              <li class="nav-item">
+                <a *ngIf='authService.admin()' class="nav-link text-white fs-14" routerLink='/produto'>INVENTÁRIO</a>
+              </li>
+
               <li class="nav-item">
                 <a class="nav-link text-white fs-14" routerLink='/designer'>SEJA UM DESIGNER</a>
               </li>

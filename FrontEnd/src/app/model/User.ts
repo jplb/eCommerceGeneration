@@ -9,6 +9,7 @@ export class User {
     public telefoneFixo: string
     public telefoneCelular: string
     public endereco: string
+    public tipo: string
 
     public produto: Produto
 }
