@@ -31,6 +31,7 @@ export class EntrarComponent implements OnInit {
       environment.nome = this.userLogin.nome
       environment.id = this.userLogin.id
       environment.email = this.userLogin.email
+      environment.tipo = this.userLogin.tipo
 
       
 
@@ -38,9 +39,11 @@ export class EntrarComponent implements OnInit {
       console.log(environment.nome)
       console.log(environment.id)
       console.log(environment.foto)
+      console.log(environment.tipo)
+      
 
 
-    this.router.navigate(['/produto'])
+    this.router.navigate(['/pedido'])
   }, erro =>{
     if(erro.status == 500){
       alert('Usuário e senha inválido')
