@@ -1,14 +1,12 @@
-<div class="container-fluid justify-content-center">
+<div>
   <!-- Navigation -->
   <div style="background-color:black">
     <nav class="navbar navbar-expand-sm navbar-with bg-with d-flex justify-items-center ml-2">
       <div class="navbar-collapse collapse w-0  order-1 order-md-0 dual-collapse2">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <img
-              src="https://i.imgur.com/wmOWqA2.png"
-              height="50px" class="d-inline-block align-top" alt="Logo">
-            
+            <img src="https://i.imgur.com/wmOWqA2.png" height="50px" class="d-inline-block align-top" alt="Logo">
+
           </li>
         </ul>
       </div>
@@ -16,7 +14,8 @@
       <!-- Busca -->
       <form class="form-inline">
         <div id="divBusca">
-          <input [(ngModel)]="pesquisa" name="pesquisa" type="search" id="txtBusca" placeholder="  Digite aqui o que procura..."/>
+          <input [(ngModel)]="pesquisa" name="pesquisa" type="search" id="txtBusca"
+            placeholder="  Digite aqui o que procura..." />
           <button class="btn btn-white" type="submit" id="cor" (click)="atualizaBusca()">
             <i id="cor" class="fa fa-search" aria-hidden="true"></i>
           </button>
@@ -24,13 +23,14 @@
       </form>
 
       <div class="navbar navbar-expand-sm d-flex justify-items-center">
-        <a class="navbar-collapse collapse w-0 text-white fs-14" routerLink='/home'>HOME</a>
-        <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse"
-          data-target=".order-2 dual-collapse2">
-          <span class="navbar-toggler-icon"></span>
-        </button>
 
         <div class="navbar-collapse collapse w-0 order-3 dual-collapse2">
+          <ul class="navbar-nav ml-1">
+            <li class="nav-item">
+              <a class="navbar-collapse collapse w-0 text-white fs-14" routerLink='/home'>HOME</a>
+            </li>
+          </ul>
+
           <ul class="navbar-nav ml-2">
             <div class="nav-item dropdown">
               <a class="btn btn-with dropdown-toggle text-white fs-14" role="button" id="dropdownMenuLink"
@@ -39,11 +39,14 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <a *ngFor='let item of listaCategoria' class="dropdown-item" (click)="refresh2(item.id)" value="" [routerLink]="['/categoria',item.id]">{{item.tema}}</a>
-
+                <!-- <a class="dropdown-item" [routerLink]="['/vitrine']">INDIE</a>
+                <a class="dropdown-item" href="">FILMES</a>
+                <a class="dropdown-item" href="">MUSICAS</a>
+                <a class="dropdown-item" href="">SIGNOS</a>
+                <a class="dropdown-item" href="">FRASES</a>
+                <a class="dropdown-item" href="">TEMAS DIVERSOS</a> -->
               </div>
             </div>
-
-            
 
             <ul class="navbar-nav ml-1">
 
