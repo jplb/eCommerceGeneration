@@ -41,6 +41,8 @@ constructor(
 
 ngOnInit() {
   this.getAllCategoria()    
+
+  
 }
 
 getAllCategoria(){

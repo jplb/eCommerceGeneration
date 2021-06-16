@@ -35,6 +35,6 @@ export class ProdutoService {
   }
 
   deleteProduto(id: number){
-    return this.http.delete(`https://hw-tshirts.herokuapp.com/produto/${id}`,this.token)
+    return this.http.delete(`https://hw-tshirts.herokuapp.com/${id}`,this.token)
   }
 }

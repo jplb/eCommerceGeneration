@@ -37,6 +37,15 @@ export class AuthService {
     return ok
   }
 
+  admin(){
+    let ok: boolean = false
+
+    if (environment.tipo =='admin') {
+      ok = true
+    }
+    return ok
+  }
+
   DesligarMenuERodape(){
     let ok: boolean = true
     if(this.router.url == '/entrar' || this.router.url == '/produto' || this.router.url == '/cadastrar') {
