@@ -2,7 +2,9 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { Categoria } from 'src/app/model/Categoria';
 import { Produto } from 'src/app/model/Produto';
+import { CategoriaService } from 'src/app/service/categoria.service';
 import { ProdutoService } from 'src/app/service/produto.service';
 import { environment } from 'src/environments/environment.prod';
 
@@ -13,12 +15,22 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class ProdutoEditComponent implements OnInit {
 
+  produto: Produto = new Produto()
+  listaProdutos: Produto[]
 
-  produto: Produto = new Produto ()
+  temaCategoria: String
+  categoria: Categoria = new Categoria()
+  listaCategoria: Categoria[]
+  idCategoria: number
+
+
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
+    private categoriaService: CategoriaService
+    
   ) { }
 
   ngOnInit() {
@@ -30,6 +42,7 @@ export class ProdutoEditComponent implements OnInit {
 
      let id = this.route.snapshot.params['id']
      this.findByIdProduto(id)
+     this.getAllCategoria()
   }
 
 
@@ -45,6 +58,19 @@ export class ProdutoEditComponent implements OnInit {
       alert('Cadastro atualizado!')
       this.router.navigate(['/produto'])
   })
-
   }
+
+
+  findByIdCategoria(){
+    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
+      this.categoria = resp
+    })
+  }
+
+  getAllCategoria() {
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
+      this.listaCategoria = resp
+    })
+  }
+
 }
