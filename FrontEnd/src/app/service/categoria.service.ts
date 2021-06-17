@@ -21,7 +21,7 @@ export class CategoriaService {
   
 
   getByIdCategoria(id: number): Observable<Categoria>{
-    return this.http.get<Categoria>(`https://hw-tshirts.herokuapp.com/${id}`)
+    return this.http.get<Categoria>(`https://hw-tshirts.herokuapp.com/categoria/${id}`)
   }
 
   getAllCategoria(): Observable<Categoria[]>{

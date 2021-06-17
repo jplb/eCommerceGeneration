@@ -14,6 +14,7 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { PedidoComponent } from './pedido/pedido.component';
 import { MetodoPagamentoComponent } from './metodo-pagamento/metodo-pagamento.component';
 import { BuscarComponent } from './buscar/buscar.component';
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
 
 
 const routes: Routes = [
@@ -35,7 +36,8 @@ const routes: Routes = [
   { path: 'produto-delete/:id', component: ProdutoDeleteComponent},
   { path: 'pedido', component: PedidoComponent},
   { path: 'metodo-pagamento/:valorTotal', component: MetodoPagamentoComponent},
-  { path: 'buscar/:procurar', component: BuscarComponent}
+  { path: 'buscar/:procurar', component: BuscarComponent},
+  { path: 'user-edit/:id', component: UserEditComponent},
 
 ];
 

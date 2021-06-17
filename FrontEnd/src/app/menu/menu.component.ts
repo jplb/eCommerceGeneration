@@ -41,6 +41,8 @@ constructor(
 
 ngOnInit() {
   this.getAllCategoria()    
+
+  
 }
 
 getAllCategoria(){
@@ -65,6 +67,7 @@ atualizaBusca(){
   this.router.navigateByUrl('/home', { skipLocationChange: true }).then(() =>{
        this.router.navigate(["/pesquisa",this.pesquisa])
   })
+  
 }
 
 sair() {
@@ -73,6 +76,8 @@ sair() {
   
 }
 
- 
 
 }
+
+ 
+

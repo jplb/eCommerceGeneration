@@ -5,17 +5,30 @@
 
 .fs-14{
     font-size: 14pt;
+    text-decoration: none;
 }
-
-  .a{
-    font-family: "caramella";
-  }
 
   .navbar{
     font-family: "caramella";
   }
 
-  .menu{font-family: "caramella";}
+  
+
+  .menu{
+    width: 100%;
+  }
+
+  
+
+  .hoover :hover {
+    background-color: orangered;
+  }
+
+  .hoover2 :hover {
+    font-weight: bold;
+  }
+
+
 
   input{
     border-radius: 25px;
