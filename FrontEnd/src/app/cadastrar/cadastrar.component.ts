@@ -42,8 +42,15 @@ cadastrar(){
       this.user = resp
       this.router.navigate(['/entrar'])
       alert('Usuário cadastrado com sucesso!') 
-    })
+    
+  }, erro => {
+      alert("Usuário já existe")
+
+    }) 
+      
   }
+
+
 }
 
 
