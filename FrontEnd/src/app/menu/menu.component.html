@@ -11,7 +11,7 @@
         </ul>
       </div>
 
-     
+
 
       <div class="navbar navbar-expand-sm d-flex justify-items-center">
 
@@ -56,28 +56,40 @@
 
                 <ul class="navbar-nav ml-2 ml-5">
                   <li class="nav-item hoover">
-                    <a class="nav-link text-white fs-14" routerLink='/sobre-nos' [routerLink]="['/user-edit', id]" *ngIf='authService.logado()'>Olá, {{nome}}</a>
+                    <a class="nav-link text-white fs-14" routerLink='/sobre-nos' [routerLink]="['/user-edit', id]"
+                      *ngIf='authService.logado()'>Olá, {{nome}}</a>
                   </li>
-                  <!--<ul class="navbar-nav ml-5">
+
+                  
+
+
+                    <ul class="navbar-nav ml-2">
+                      <li class="nav-item hoover">
+                        <a (click)='sair()' class="nav-link  text-white fs-14"  *ngIf='authService.logado()'>Sair <i class="fa fa-sign-out"
+                          aria-hidden="true"></i></a>
+                      </li>
+
+                    <!--<ul class="navbar-nav ml-5">
                   <li class="nav-item">
                     <a class="nav-link text-white fs-14" href="#">AJUDA</a>
                   </li>
                 </ul>-->
-                  <li class="nav-item mr-3 ml-3 hoover">
-                    <a class="nav-link">
-                      <a *ngIf='authService.logado()== false' class="m-1 text-white fs-14" routerLink="/entrar">
-                        <i class="fa fa-user" aria-hidden="true"></i>
+                    <li class="nav-item mr-3 ml-3 hoover">
+                      <a class="nav-link">
+                        <a *ngIf='authService.logado()== false' class="m-1 text-white fs-14" routerLink="/entrar">
+                          <i class="fa fa-user" aria-hidden="true"></i>
+                        </a>
                       </a>
-                    </a>
-                  </li>
-                  <li class="nav-item hoover">
-                    <a class="nav-link">
-                      <a class=" text-white fs-14" routerLink="/pedido">
-                        <i class="fa fa-shopping-cart" aria-hidden="true">
-                        </i>
+                    </li>
+                    <li class="nav-item hoover">
+                      <a class="nav-link">
+                        <a class=" text-white fs-14" routerLink="/pedido">
+                          <i class="fa fa-shopping-cart" aria-hidden="true">
+                          </i>
+                        </a>
                       </a>
-                    </a>
-                  </li>
+                    </li>
+                  </ul>
                 </ul>
               </ul>
             </ul>
