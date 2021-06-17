@@ -12,7 +12,7 @@
 
 
             <div class="row  d-flex justify-content-center mt-5 mb-5">
-                <div class="col-md-12">
+                <div class="col-md-12 column">
                     <div class="form-group">
                         <input [(ngModel)]='produto.nome' type="text" class="form-control" id="nome"
                             placeholder="Digite o nome do produto">
@@ -29,6 +29,11 @@
                     </div>
 
                     <div class="form-group">
+                        <input [(ngModel)]='produto.modelo' type="text" class="form-control" id="tamanho"
+                            placeholder="Digite o modelo do produto">
+                    </div>
+
+                    <div class="form-group">
                         <input [(ngModel)]='produto.cor' type="text" class="form-control" id="cor"
                             placeholder="Digite a cor do produto">
                     </div>
@@ -42,6 +47,14 @@
                         <input [(ngModel)]='produto.estoque' type="text" class="form-control" id="estoque"
                             placeholder="Digite a quantidade em estoque do produto">
                     </div>
+
+                    <div class="form-group">
+                        <label>Categoria</label>
+                        <select [(ngModel)]='idCategoria' (change)="findByIdCategoria()" class="form-control">
+                          <option *ngFor="let item of listaCategoria" value="{{item.id}}">{{item.tema}}</option>
+                        </select>
+                      </div>
+
 
 
                     <div class="d-flex justify-content-center mb-5">
