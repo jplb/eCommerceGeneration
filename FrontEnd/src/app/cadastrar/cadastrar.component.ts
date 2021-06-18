@@ -43,10 +43,11 @@ cadastrar(){
       this.router.navigate(['/entrar'])
       alert('Usuário cadastrado com sucesso!') 
     
-  }, erro => {
-      alert("Usuário já existe")
-
-    }) 
+  }, error => {
+    if(error.status == 400){
+      alert('Usuário já existe')
+    }
+  })
       
   }
 
