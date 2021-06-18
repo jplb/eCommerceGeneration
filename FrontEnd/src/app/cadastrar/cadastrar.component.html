@@ -1,10 +1,12 @@
-<div class="container justify-content-center">
+<div class="container-fluid justify-content-center background-color p-0">
     <div class="row d-flex justify-content-center align-items-center background-color">
-      <div class="col-md-5 mb-5">
+      <div class="col-md-4 mb-5">
         <div class="card mt-4 border-0 dialogueBox">
           <div class="row d-flex justify-content-center mt-5">
             <div class="col-md-4"><a routerLink='/home'><img src="https://i.imgur.com/oA99OWn.png" alt="" class="img-fluid"></a></div>
           </div>
+
+          <!--Formulário de Cadastro-->
           <h1 class="text-center text-dark mt-1 mb-3">Cadastre-se</h1>
 
           <div class="row d-flex justify-content-center">
@@ -13,20 +15,32 @@
                 <form novalidate="" class="mt-5 ng-pristine ng-valid ng-touched">
 
                 <div class="form-group mb-3">
-                    <input [(ngModel)]='user.nomeCompleto' class="form-control border-top-0 border-right-0 border-left-0" type="text" name="nome" id="nome" placeholder="Seu nome">
+                    <input [(ngModel)]='user.nome' class="form-control border-top-0 border-right-0 border-left-0" type="text" name="nome" id="nome" placeholder="Seu nome" (keyup)="validaNome($event)">
+                    <div class="invalid-feedback" >
+                      Insira um nome com mais de 2 characters.
+                    </div>
                 </div>
 
                 <div class="form-group mb-3">
-                    <input [(ngModel)]='user.email' class="form-control border-top-0 border-right-0 border-left-0" type="email" name="email" id="exampleInputEmail1" placeholder="Seu e-mail">
+                    <input [(ngModel)]='user.email' class="form-control border-top-0 border-right-0 border-left-0" type="email" name="email" id="exampleInputEmail1"  placeholder="Seu e-mail" aria-describedby="emailHelp" (keyup)="validaEmail($event)">
+                    <div class="invalid-feedback">
+                      Insira um email válido.
+                    </div>     
                 </div>
 
                 <div class="form-group mb-3">
-                    <input (input) = 'confirmSenha($event)' class="form-control border-top-0 border-right-0 border-left-0" type="password" name="senha" id="senha" placeholder="Sua senha">
+                    <input [(ngModel)]='user.senha' class="form-control border-top-0 border-right-0 border-left-0" type="password" name="senha" id="senha" placeholder="Sua senha" (keyup)="validaSenha($event)">
+                    <div class="invalid-feedback" >
+                      Insira uma senha com mais de 6 characters.
+                    </div>
                 </div>
 
                 <div class="form-group mb-3">
-                    <input [(ngModel)]='user.senha' class="form-control border-top-0 border-right-0 border-left-0" type="password" name="confirmarSenha" id="confirmarSenha"
-                        placeholder="Confirme sua senha">
+                    <input (input) = 'confirmSenha($event)' class="form-control border-top-0 border-right-0 border-left-0" type="password" name="confirmarSenha" id="confirmarSenha"
+                        placeholder="Confirme sua senha" (keyup)="confirmaSenhas($event)">
+                        <div class="invalid-feedback" >
+                          Senhas diferentes.
+                        </div>
                 </div>
 
                 <div class="form-group mb-3">
@@ -51,6 +65,9 @@
             </form>
             </div>
           </div>
+
+           <!--Formulário de Cadastro-->
+           
         </div>
       </div>
     </div>

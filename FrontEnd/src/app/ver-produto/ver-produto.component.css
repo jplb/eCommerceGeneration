@@ -61,31 +61,41 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #571180;
+    background-color: white;
     border-radius:0px;
     max-width: 95px;
+    width: 30px;
     height: 30px;
     display: flex;
     margin: 0px;
+    text-align: center;
   }
   #minus{
     float:left;
-    background-color:transparent;
+    background-color:#420366;
     color: white;
     font-size:18px;
     font-weight: bold;
     border: none;
     margin: 0px;
+    width: 30px;
+    height: 30px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
   }
   
   #plus{
     float:right;
-    background-color:transparent;
+    background-color:#420366;
     color: white;
     font-size:18px;
     font-weight: bold;
     border: none;
     margin: 0px;
+    width: 30px;
+    height: 30px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
   
    #quant{
@@ -100,6 +110,10 @@
   #quantrow{
     align-items: baseline;
     margin-top: 20px;
+  }
+
+  #divCor{
+    align-content:space-between;
   }
   
   img{

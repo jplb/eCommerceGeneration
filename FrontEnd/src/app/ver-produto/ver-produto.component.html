@@ -9,18 +9,16 @@
   <!--FOTO DO PRODUTO-->
   <div id="grup" class="d-flex justify-content-center">
     <a href="">
-      <!--<img
-        src="https://static3.tcdn.com.br/img/img_prod/482157/180_camiseta_t_shirt_asas_off_white_7166_1_c7abb27e05a87d60b0737bb521ce3ba6.jpg"
-        alt="Foto do Produto" height="800px">-->
-      <img src={{verProduto.foto}} alt="Foto do Produto" height="800px">
-      </a>
+      <img src={{verProduto.foto}} alt="Foto do Produto" height="800px"/>
+      <!--<img src="https://static3.tcdn.com.br/img/img_prod/482157/180_camiseta_t_shirt_asas_off_white_7166_1_c7abb27e05a87d60b0737bb521ce3ba6.jpg" alt="Foto do Produto" height="800px"> -->
+    </a>
 
     <div class="col-5" id="txt-grup">
-      <!--<h2>Gatos Miando</h2>-->
-      <h2>{{verProduto.nome}}}}</h2>
+      <h2>{{verProduto.nome}}</h2>
+      <!-- <h2>Woman's Fly</h2> -->
 
-      <!--<h1>R$ 79,90</h1>-->
       <h1>{{verProduto.preco.toFixed(2).replace('.', ',')}}</h1>
+      <!-- <h1>R$ 79,90</h1> -->
 
       <div class="y-productSkuSelection"><span class="y-selectionDesc mr-2">Selecione um tamanho:</span></div>
 
@@ -43,38 +41,46 @@
         <label for="1290346762" class="mr-2">XXG</label>
       </div>
 
-      <div class="y-productSkuSelection justify-content-center"><span class="y-selectionDesc mr-6">Selecione uma
-          cor:</span>
-        <a class="btn btn-with dropdown-toggle text-white  fs-14" role="button" id="dropdownMenuLink"
-          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Cor
-        </a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item" href="" value="Branco">Branco</a>
-          <a class="dropdown-item" href="" value="Preto">Preto</a>
-          <a class="dropdown-item" href="" value="Cinza">Cinza</a>
-          <a class="dropdown-item" href="" value="Vermelho">Vermelho</a>
-          <a class="dropdown-item" href="" value="Rosa">Rosa</a>
-          <a class="dropdown-item" href="" value="Amarelo">Amarelo</a>
+      <div class="row d-flex justify-content-center">
+        <div class="ml-4">
+          <div class="y-productSkuSelection justify-content-center" id="divCor">
+            <span class="y-selectionDesc mr-6 justify-content-center">Selecione uma cor:
+              <a class="btn btn-with dropdown-toggle text-white justify-content-center fs-14 mr-8" role="button"
+                id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Cor
+              </a>
+            </span>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="" value="Branco">Branco</a>
+              <a class="dropdown-item" href="" value="Preto">Preto</a>
+              <a class="dropdown-item" href="" value="Cinza">Cinza</a>
+              <a class="dropdown-item" href="" value="Vermelho">Vermelho</a>
+              <a class="dropdown-item" href="" value="Rosa">Rosa</a>
+              <a class="dropdown-item" href="" value="Amarelo">Amarelo</a>
+            </div>
+          </div>
         </div>
       </div>
-
-
-      <!--QUANTIDADE-->
-      <div id="quantrow" class="row">
-        <div class="col-md-5">
-          <p> Quantidade:</p>
-        </div>
-        <div class="col-md-1">
-          <p></p>
-        </div>
-        <div class="col-md-5" id="quantidade">
-          <!--<input type="button" id="minus" value="-" />-->
-          <input type="button" id="minus" (click)="processo(-1)" (click)="calculaSubTotal()" value="-"/>
-          <input class="text" size="1" value="1" type="text" maxlength="2" />
-          <input [(ngModel)]="quantidade" id="quantidade" name="quantidade" class="text" size="1" value="1" type="text" maxlength="2" />
-          <!--<input type="button" id="plus" value="+">-->
-          <input type="button" id="plus" (click)="processo(1)" (click)="calculaSubTotal()" value="+">
+      <div class="row d-flex justify-content-center">
+        <div class="col-ml-8">
+          <!--QUANTIDADE-->
+          <div id="quantrow" class="row">
+            <div class="col-ml-16">
+              <p> Quantidade:</p>
+            </div>
+            <div class="col-md-2">
+              <p></p>
+            </div>
+            <div class="col-ml-5" id="quantidade">
+              <!--<input type="button" id="minus" value="-" />-->
+              <input type="button" id="minus" (click)="processo(-1)" (click)="calculaSubTotal()" value=" -" />
+              <input [(ngModel)]="quantidade" id="quantidade" name="quantidade" class="text" size="1" value="1"
+                type="text" maxlength="2" />
+              <!--<input type="button" id="plus" value="+">-->
+              <input type="button" id="plus" (click)="processo(1)" (click)="calculaSubTotal()" value="+ ">
+            </div>
+          </div>
         </div>
       </div>
       <!-- <button type="button" class="btn bb">Adicionar ao pedido</button>-->

@@ -32,6 +32,13 @@
     }
   }
   
+  .btn{
+    color: white;
+    background-color: #FF4500;
+    width: 90%;
+}
+
+
   
   .foo img:last-child{display:none}
   .foo:hover img:first-child{display:none}

@@ -20,18 +20,30 @@ export class AuthService {
   ) { }
 
   entrar(userLogin: UserLogin) : Observable<UserLogin>{
-    return this.http.post<UserLogin>('http://localhost:8080/usuario/logar',userLogin)
+    return this.http.post<UserLogin>('https://hw-tshirts.herokuapp.com/usuario/logar',userLogin)
   }
 
   cadastrar(user: User) : Observable<User>{
-    return this.http.post<User>('http://localhost:8080/usuario/cadastrar',user)
+    return this.http.post<User>('https://hw-tshirts.herokuapp.com/usuario/cadastrar',user)
   }
 
+  getByIdUser(id: number): Observable<User>{
+    return this.http.get<User>(`https://hw-tshirts.herokuapp.com/usuario/${id}`)
+  }
 
   logado(){
     let ok: boolean = false
 
     if (environment.token !='') {
+      ok = true
+    }
+    return ok
+  }
+
+  admin(){
+    let ok: boolean = false
+
+    if (environment.tipo =='admin') {
       ok = true
     }
     return ok
