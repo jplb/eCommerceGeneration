@@ -5,10 +5,10 @@ img{
     margin:0;
   }
 
-/* Remove extra left and right margins, due to padding in columns */
+/* Rremove espaços extras entre colunas */
 .row {margin: 0 -5px;}
   
-/* Clear floats after the columns */
+/* Limpa os floats após as colunas*/
 .row:after {
   content: "";
   display: table;
@@ -17,7 +17,7 @@ img{
 
 
 
-    /* Float four columns side by side */
+    /* 4 colunas lado a lado */
     .column {
       float: left;
       width: 25%;
@@ -33,9 +33,16 @@ img{
 background-color: orange;
 }
 
+/* Estiliza os cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Adiciona efeito ao card */
+  padding: 2px;
+  text-align: center;
+  background-color: #f1f1f1;
+  margin-top: 5%;
+}
 
-
-/* Responsive columns - one column layout (vertical) on small screens */
+ /* Colunas responsivas - uma imagem vertical em telas pequenas*/
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
