@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { User } from 'src/app/model/User';
 import { AuthService } from 'src/app/service/auth.service';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-user-edit',
@@ -68,7 +69,11 @@ atualizar(){
     this.authService.cadastrar(this.user).subscribe((resp: User) =>{
       this.user = resp
       this.router.navigate(['/inicio'])
-      alert('Usuário atualizado com sucesso!')
+      Swal.fire({
+        icon: 'success',
+        title: 'Tudo certo!',
+        text: 'para aplicar as as atualizaçoes, faça log out.'
+      })
       })
 
   }

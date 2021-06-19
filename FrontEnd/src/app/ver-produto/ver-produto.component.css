@@ -137,3 +137,41 @@
     background-color: #346350;
     text-decoration: none;
   }
+
+
+
+
+
+  /* 4 colunas lado a lado */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove espaços extras entre colunas */
+.row {margin: 0 -5px;}
+
+/* Limpa floats após as colunas*/
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Estiliza os cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Adiciona efeito ao card */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+@media screen and (max-width: 900px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    column-count: 1;
+  }
+}

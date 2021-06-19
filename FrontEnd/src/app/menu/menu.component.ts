@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { User } from '../model/User';
@@ -73,6 +74,11 @@ atualizaBusca(){
 sair() {
   environment.token = ''
   this.router.navigate(["/home"])
+  Swal.fire({
+    icon: 'success',
+    title: 'Saindo ...',
+    text: 'Obrigado por comprar conosco!'
+  })
   
 }
 

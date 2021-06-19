@@ -38,10 +38,13 @@ export class VerProdutoComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0, 0)
+  
     let id = this.aRoute.snapshot.params['id']
     this.findProdById(id)
+    
     this.quantidade = 1
     this.subTotal = this.verProduto.preco
+    console.log(this.subTotal)
   }
 
   processo(valor: number) {

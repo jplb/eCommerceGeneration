@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'entrar', component: EntrarComponent },
   { path: 'cadastrar', component: CadastrarComponent },
-  { path: 'ver-produto', component: VerProdutoComponent},
+  { path: 'ver-produto/:id', component: VerProdutoComponent},
   { path: 'vitrine', component: VitrineComponent},
   { path: 'produto', component: ProdutoComponent },
   { path: 'home', component: HomeComponent },
