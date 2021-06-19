@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { User } from '../model/User';
 import { AuthService } from '../service/auth.service';
 
@@ -36,16 +37,28 @@ confirmSenha(event:any){
 
 cadastrar(){
   if(this.user.senha != this.confirmarSenha){
-    alert('Senhas Diferentes!')
+    Swal.fire({
+      icon: 'warning',
+      title: 'Oops...',
+      text: 'Senhas diferentes!'
+    })
   }else{
     this.authService.cadastrar(this.user).subscribe((resp: User) =>{
       this.user = resp
       this.router.navigate(['/entrar'])
-      alert('Usuário cadastrado com sucesso!') 
+      Swal.fire({
+        icon: 'success',
+        title: 'Protinho!',
+        text: 'Usuário cadastrado com sucesso!'
+      })
     
   }, error => {
     if(error.status == 400){
-      alert('Usuário já existe')
+      Swal.fire({
+        icon: 'warning',
+        title: 'Oops...',
+        text: 'Email já cadastrado!'
+      })
     }
   })
       

@@ -14,11 +14,11 @@
       <!--cada card com o produto-->
       <div class="card" [routerLink]="['/produto', produto.id]">
         <div class="d-flex justify-content-center">
-          <img class="img-fluid" alt="Imagem do produto" src="{{produto.foto}}">
+          <img class="img-fluid" [routerLink]="['/ver-produto',produto.id]" alt="Imagem do produto" src="{{produto.foto}}">
         </div>
         <div class="card-body text-center">
           <h4 class="nome">{{produto.preco}} R$</h4>
-            <a class="btn btn-verde w-50" [routerLink]="['/produto',produto.id]">Ver produto</a>
+            <a class="btn btn-verde w-50" [routerLink]="['/ver-produto',produto.id]">Ver produto</a>
         </div>
       </div>
 
