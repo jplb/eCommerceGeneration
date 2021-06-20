@@ -28,12 +28,14 @@ export class PedidoComponent implements OnInit {
     window.scroll(0,0)
     this.mostrarPedido()
     this.calculaTotal()
+    console.log(this.subTotal)
   }
 
   mostrarPedido() {
-    const localS = localStorage['pedido']
-    if (localS.length > 0) {
+    const localS = localStorage.getItem('pedido')
+    if (localS != null && localS.length > 0) {
       this.pedido = localS ? JSON.parse(localS) : []
+      console.log('pedido = ', this.pedido)
     } else {
       this.vazio = "Não há pedidos ainda."
       this.valorTotal = 0
@@ -50,6 +52,7 @@ export class PedidoComponent implements OnInit {
       }
       this.valorTotal = this.pedidoInic.valor + this.valorTotal
     })
+    
     return this.valorTotal.toFixed(2)
   }
 

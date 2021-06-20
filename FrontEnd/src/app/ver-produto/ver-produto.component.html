@@ -1,15 +1,20 @@
-<div class="container-fluid justify-content-center mt-3 mb-5">
+<div class="container mt-3 mb-5">
   <div class="row d-flex justify-content-center">
-  
+    <div class="col-md-12">
+      <!--<h1 class="text-center titulo font:Kinan">Indie</h1>-->
+      <h1 class="text-center titulo">{{verProduto.tema}}</h1>
+    </div>
+  </div>
+
   <!--FOTO DO PRODUTO-->
-  <div id="grup" class="col-md-3 justify-content-center">
+  <div id="grup" class="col-md-6 d-flex justify-content-center">
     <a href="">
-      <img  src={{verProduto.foto}} alt="Foto do Produto" height="700px"/>
+      <img  src={{verProduto.foto}} alt="Foto do Produto" height="800px"/>
       <!--<img src="https://static3.tcdn.com.br/img/img_prod/482157/180_camiseta_t_shirt_asas_off_white_7166_1_c7abb27e05a87d60b0737bb521ce3ba6.jpg" alt="Foto do Produto" height="800px"> -->
     </a>
   </div>
 
-    <div class="col-md-6 justify-content-center" id="txt-grup">
+    <div class="col5" id="txt-grup">
       <h2>{{verProduto.nome}}</h2>
       <!-- <h2>Woman's Fly</h2> -->
 
@@ -38,7 +43,7 @@
       </div>
 
       <div class="row d-flex justify-content-center">
-        <div class="ml-0">
+        <div class="ml-4">
           <div class="y-productSkuSelection justify-content-center" id="divCor">
             <span class="y-selectionDesc mr-6 justify-content-center">Selecione uma cor:
               <a class="btn btn-with dropdown-toggle text-white justify-content-center fs-14 mr-8" role="button"
@@ -80,7 +85,6 @@
         </div>
       </div>
       <!-- <button type="button" class="btn bb">Adicionar ao pedido</button>-->
-      <button type="button" class="btn bb w-50" (click)="addPedido()">Adicionar ao pedido</button>
+      <button type="button" class="btn bb" (click)="addPedido()">Adicionar ao pedido</button>
     </div>
-    </div>
-  </div>
+  
