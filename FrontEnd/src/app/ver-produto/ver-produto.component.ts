@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment.prod';
 import { User } from '../model/User';
 import Swal from 'sweetalert2';//importado de https://sweetalert2.github.io/
 import { VerProdutoService } from '../service/ver-produto.service';
+import { Categoria } from '../model/Categoria';
 
 @Component({
   selector: 'app-produto',
@@ -25,6 +26,7 @@ export class VerProdutoComponent implements OnInit {
   public modelo: string
   public quantidade: number
   public subTotal: number
+  public categoria: Categoria
   pedido: VerProduto[]
   user: User = new User()
   idUser = environment.id
@@ -89,7 +91,8 @@ export class VerProdutoComponent implements OnInit {
           tamanho: this.verProduto.tamanho,
           cor: this.verProduto.cor,
           tema: this.verProduto.tema,
-          modelo: this.verProduto.modelo
+          modelo: this.verProduto.modelo,
+          categoria: this.verProduto.categoria
         })
       localStorage.setItem('pedido', JSON.stringify(this.pedido))
       Swal.fire({

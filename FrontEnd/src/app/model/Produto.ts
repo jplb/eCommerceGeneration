@@ -13,5 +13,7 @@ export class Produto {
     public modelo: string
     public estoque: number
     public categoria: Categoria
-    public usuario: User
+    public user: User
+    public quantidade: number
+    public subTotal: number
 }

@@ -17,23 +17,37 @@
   }
   
   p{
-    color: white;
+    color: black;
   }
+
   .row{
     display: flex;
     justify-content: center;
     align-items:center;
     margin: 0px;
   }
-  #container-produto{
-  
-      background-color: black;
-      border-radius: 10px;
-      width: 700px;
+
+  #nome{
+    font-family: "caramella";
+    font-size: 20pt;
   }
+
+  #preco{
+    font-family: "caramella";
+    font-size: 20pt;
+  }
+
+  #container-produto{
+    border-color: #FF4500;
+    background-color: rgb(219, 219, 219);
+    border-radius: 10px;
+    width: 700px;
+  }
+
   #produto{
     text-align: center;
   }
+
   #produto img{
       width: 100px;
       margin: 2vh 0 2vh 0;
@@ -43,10 +57,12 @@
     font-size: 20pt;
   
   }
+
   #confirma{
       display: flex;
       justify-content: center;
   }
+  
   #total{
       margin-bottom: 10vh;
       text-align: right;
@@ -96,7 +112,8 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    font-size: 80pt;
+    font-size: 40pt;
+    font-family: "caramella";
   }
   
   #vazio{
