@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
-import { VerProduto } from '../model/VerProduto';
+import { Categoria } from '../model/Categoria';
+import { Produto } from '../model/Produto';
 import { User } from '../model/User';
 import { AuthService } from '../service/auth.service';
-import { VerProdutoService } from '../service/ver-produto.service';
+import { CategoriaService } from '../service/categoria.service';
+import { ProdutoService } from '../service/produto.service';
 
 @Component({
   selector: 'app-vitrine',
@@ -14,15 +16,20 @@ import { VerProdutoService } from '../service/ver-produto.service';
 
 export class VitrineComponent implements OnInit {
 
-  produto: VerProduto = new VerProduto();
-  listaProdutos: VerProduto[];
+  produto: Produto = new Produto();
+  listaProdutos: Produto[];
+
+  categoria: Categoria = new Categoria();
+  listaCategorias: Categoria[];
+  idCategoria: number;
 
   user: User = new User();
-  idUsuario = environment.id;
+  idUser = environment.id;
 
   constructor(
     private router: Router,
-    private verProdutoService: VerProdutoService,
+    private produtoService: ProdutoService,
+    private categoriaService: CategoriaService,
     private authService: AuthService
   ) { }
 
@@ -32,9 +39,8 @@ export class VitrineComponent implements OnInit {
   }
 
   findAllProdutos() {
-    this.verProdutoService.getAllProduto().subscribe((resp: VerProduto[])=>{
+    this.produtoService.getAllProdutos().subscribe((resp: Produto[])=>{
       this.listaProdutos = resp;
     });
   }
-
 }

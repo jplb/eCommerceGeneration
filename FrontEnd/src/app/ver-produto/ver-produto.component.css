@@ -42,20 +42,16 @@
       background-color: #420366;
       width: 90%;
   }
+
+  h1{
+    color: #4F4F4F;
+    font-size: 70px;
+   }
   
   h2{
     font-size: 50px;
     color: #FF4500;
    }
-  
-   h1{
-    color: #4F4F4F;
-    font-size: 70px;
-   }
-  h5{
-    color:  #961475;
-    align-items: center;
-  }
   
    #quantidade{
     display: flex;
@@ -130,18 +126,6 @@
     padding-right: 20px;
   }
   
-  .hover{
-    text-decoration: none;
-  }
-  .hover:hover{
-    background-color: #346350;
-    text-decoration: none;
-  }
-
-
-
-
-
   /* 4 colunas lado a lado */
 .column {
   float: left;
@@ -161,7 +145,7 @@
 
 /* Estiliza os cards */
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Adiciona efeito ao card */
+  box-shadow: 0 4px 8px 0 rgba(119, 118, 118, 0.2); /* Adiciona efeito ao card */
   padding: 16px;
   text-align: center;
   background-color: #f1f1f1;

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { environment } from 'src/environments/environment.prod';
+import { environment } from '../../environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { User } from '../model/User';
@@ -26,8 +26,6 @@ export class CategoriaComponent implements OnInit {
   listaProduto: Produto[]
   idProduto: number
 
-
-
   constructor(
     private route: ActivatedRoute,
     private authService: AuthService,
@@ -38,9 +36,7 @@ export class CategoriaComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    window.scroll(0, 0)
-    
-    
+    window.scroll(0, 0)    
     let id = this.route.snapshot.params['id']
     this.findByIdCategoria(id)
   }
@@ -57,8 +53,4 @@ export class CategoriaComponent implements OnInit {
       this.produto = resp;
     })
   }
-
- 
-  
-  
 }
