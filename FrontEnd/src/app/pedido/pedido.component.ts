@@ -51,26 +51,6 @@ export class PedidoComponent implements OnInit {
     }
   }
 
-
-  // userOb = {
-  //   nome: '',
-  //   user: '',
-  //   senha: ''
-  // }
-
-  // let users = []
-  // users = JSON.parse(localStorage.getItem('lista_users'))
-
-  // users.forEach((i) => {
-
-  //     userOb = {
-  //       nome: i.nome,
-  //       user: i.user,
-  //       senha: i.senha
-  //     }
-  // })
-
-
   calculaTotal() {
     this.valorTotal = 0
     let dadosProd = []
