@@ -5,7 +5,7 @@
 
 <p align="center">
 <a target="_blank" href="https://hw-tshirts.netlify.app/home ">
-  <img src="https://i.imgur.com/YpUX1SX.jpg " alt="HW image"/>
+  <img src="https://i.imgur.com/TP0Xj1r.jpg " alt="HW image"/>
   </a>
 </p>
 
@@ -18,11 +18,10 @@ Projeto integrador proposto pelo bootcamp Generation Brasil, cobrindo todo o asp
 
 <h2>Visão resumida do Site</h2>
 
-<h6>Página home do site</h6>
-<img alt="Tabelas" src="https://i.imgur.com/YpUX1SX.jpg "/>
-<img alt="Tabelas" src="https://i.imgur.com/bhiG778.png"/>
-<img alt="Tabelas" src="https://i.imgur.com/T1wMWeo.png"/>
-
+<h6>Página de uma das categorias de camisetas</h6>
+<img alt="Categoria Frases" src="https://i.imgur.com/iq7QGB0.jpg"/>
+<h6>Página de pedido</h6>
+<img alt="Pedido" src="https://i.imgur.com/v0N0wdv.png"/>
 
 
 <h2>Funcionalidades da aplicação</h2>
@@ -36,15 +35,13 @@ Projeto integrador proposto pelo bootcamp Generation Brasil, cobrindo todo o asp
 - [x] Editar dados do usuário
 - [x] Sobre nós
 - [x] Seja um Designer
+- [x] Acessibilidade
 
 <h4>Implementações futuras</h4>
 
 - APIs do face, Gmail e Apple para facilitar login
 - API correios e outras transportadoras, para diferentes opções de envio
-- Subir para Cloud privada AWS
-- [ ] Acessibilidade 
-
-
+- Subir para Cloud privada
 
 
 <h2>Tecnologias utilizadas</h2>
