@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment.prod';
 import { User } from '../model/User';
 import Swal from 'sweetalert2'; //importado de https://sweetalert2.github.io/
 import { VerProdutoService } from '../service/ver-produto.service';
+import { Categoria } from '../model/Categoria';
 
 @Component({
   selector: 'app-produto',
@@ -12,6 +13,7 @@ import { VerProdutoService } from '../service/ver-produto.service';
   styleUrls: ['./ver-produto.component.css'],
 })
 export class VerProdutoComponent implements OnInit {
+
   verProduto: VerProduto = new VerProduto();
   public id: number;
   public nome: string;
@@ -27,6 +29,7 @@ export class VerProdutoComponent implements OnInit {
   pedido: VerProduto[];
   user: User = new User();
   idUser = environment.id;
+
 
   findProdById(id: number) {
     this.verProdutoService.getByIdProduto(id).subscribe((resp: VerProduto) => {
@@ -74,6 +77,7 @@ export class VerProdutoComponent implements OnInit {
 
       this.router.navigate(['/login']);
     } else {
+
       this.calculaSubTotal();
       const pedidos = localStorage.getItem('pedido');
       if (pedidos != null) {
@@ -106,6 +110,7 @@ export class VerProdutoComponent implements OnInit {
           text: 'O produto já consta no pedido!',
         });
       
+
     }
   }
 

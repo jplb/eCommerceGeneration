@@ -17,59 +17,41 @@ import { ProdutoService } from '../service/produto.service';
 })
 export class MenuComponent implements OnInit {
 
- 
+  produto: Produto = new Produto
 
-produto: Produto = new Produto
+  categoria: Categoria = new Categoria
+  listaCategoria: Categoria[]
+  idCategoria: number
+  pesquisa: string
 
-categoria: Categoria = new Categoria
-listaCategoria: Categoria[]
-idCategoria:number
-pesquisa: string
+  user: User = new User()
+  nome = environment.nome
+  token = environment.token
+  id = environment.id
 
-user: User = new User()
-nome = environment.nome
-token = environment.token
-id = environment.id
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    public authService: AuthService,
+    private categoriaService: CategoriaService,
+    private produtoService: ProdutoService
+  ) { }
 
+  ngOnInit() {
+    this.getAllCategoria()
+  }
 
-constructor(
-  private http: HttpClient,
-  private router: Router,
-  public authService: AuthService,
-  private categoriaService: CategoriaService,
-  private produtoService: ProdutoService
-) { }
+  getAllCategoria() {
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
+      this.listaCategoria = resp
+    })
+  }
 
-ngOnInit() {
-  this.getAllCategoria()    
-
-  
-}
-
-getAllCategoria(){
-  this.categoriaService.getAllCategoria().subscribe((resp:Categoria[])=>{
-    this.listaCategoria=resp
-  })
-}
-
-findCategoriaById(){
-  this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp:Categoria)=>{
-    this.categoria = resp
-  })
-}
-
-refresh2(idCat: number){
-  this.router.navigateByUrl('/home', { skipLocationChange: true }).then(() =>{
-       this.router.navigate(['/categoria',idCat])
-  })
-}
-
-atualizaBusca(){
-  this.router.navigateByUrl('/home', { skipLocationChange: true }).then(() =>{
-       this.router.navigate(["/pesquisa",this.pesquisa])
-  })
-  
-}
+  findCategoriaById() {
+    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
+      this.categoria = resp
+    })
+  }
 
 sair() {
   environment.token = ''
@@ -79,11 +61,20 @@ sair() {
     title: 'Saindo ...',
     text: 'Obrigado por comprar conosco!'
   })
-  
+}
+  refresh2(idCat: number) {
+    this.router.navigateByUrl('/home', { skipLocationChange: true }).then(() => {
+      this.router.navigate(['/categoria', idCat])
+    })
+  }
+
+  atualizaBusca() {
+    this.router.navigateByUrl('/home', { skipLocationChange: true }).then(() => {
+      this.router.navigate(["/pesquisa", this.pesquisa])
+    })
+  }
+
 }
 
 
-}
-
- 
 

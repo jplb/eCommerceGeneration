@@ -17,24 +17,21 @@ export class EntrarComponent implements OnInit {
   constructor(
     private auth: AuthService,
     public router: Router
-  )
-   { }
+  ) { }
 
-  ngOnInit(){
-    window.scroll(0,0)
+  ngOnInit() {
+    window.scroll(0, 0)
   }
 
-  entrar(){
-    this.auth.entrar(this.userLogin).subscribe((resp: UserLogin)=>{
-    this.userLogin = resp
+  entrar() {
+    this.auth.entrar(this.userLogin).subscribe((resp: UserLogin) => {
+      this.userLogin = resp
 
-      environment.token= this.userLogin.token
+      environment.token = this.userLogin.token
       environment.nome = this.userLogin.nome
       environment.id = this.userLogin.id
       environment.email = this.userLogin.email
       environment.tipo = this.userLogin.tipo
-
-      
 
       console.log(environment.token)
       console.log(environment.nome)
@@ -42,24 +39,16 @@ export class EntrarComponent implements OnInit {
       console.log(environment.foto)
       console.log(environment.tipo)
       
-
-
-    this.router.navigate(['/pedido'])
-  }, erro =>{
-    if(erro.status == 500){
-      Swal.fire({
-        icon: 'warning',
-        title: 'Oops...',
-        text: 'Usuário ou senha incorretos!'
+      this.router.navigate(['/pedido'])
+    },
+      erro => {
+        if (erro.status == 500) {
+          Swal.fire({
+            icon: 'error',
+            title: 'Atenção',
+            text: 'Dados do cartão estão incorretos.'
+          })
+        }
       })
-
-
-
-
-    }
-
-  })
-
   }
-
 }

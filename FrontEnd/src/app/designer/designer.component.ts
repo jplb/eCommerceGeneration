@@ -18,7 +18,7 @@ export class DesignerComponent implements OnInit {
   }
 
 
-  mensagem(){
+  mensagem() {
     Swal.fire({
       icon: 'success',
       title: 'Mensagem Enviada!',
@@ -26,35 +26,26 @@ export class DesignerComponent implements OnInit {
     })
   }
 
-
-
-
-
   /* Validação de entrada  */
 
-validacao(condicao: boolean, event:any){
-  let valid = false;
-  if(condicao){
-    event.target.classList.remove("is-valid");
-    event.target.classList.add("is-invalid");
-  }else{
-    event.target.classList.remove("is-invalid");
-    event.target.classList.add("is-valid");
-    valid = true;
+  validacao(condicao: boolean, event: any) {
+    let valid = false;
+    if (condicao) {
+      event.target.classList.remove("is-valid");
+      event.target.classList.add("is-invalid");
+    } else {
+      event.target.classList.remove("is-invalid");
+      event.target.classList.add("is-valid");
+      valid = true;
+    }
+    return valid;
   }
-  return valid;
-}
 
-validaNome(event: any){
-  this.nomeValido = this.validacao(event.target.value.length < 3, event);
-  
-  
-}
+  validaNome(event: any) {
+    this.nomeValido = this.validacao(event.target.value.length < 3, event);
+  }
 
-validaEmail(event: any){
-  this.emailValido = this.validacao(event.target.value.indexOf('@') == -1 || event.target.value.indexOf('.') == -1, event)
-  
-}
-
-
+  validaEmail(event: any) {
+    this.emailValido = this.validacao(event.target.value.indexOf('@') == -1 || event.target.value.indexOf('.') == -1, event)
+  }
 }

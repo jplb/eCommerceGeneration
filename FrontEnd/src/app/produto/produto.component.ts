@@ -23,18 +23,19 @@ export class ProdutoComponent implements OnInit {
   idCategoria: number
 
   constructor(
-
-
     private router: Router,
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService
-
   ) { }
 
   ngOnInit() {
 
     if (environment.token == '') {
-      alert('Sua sessão expirou! Faça login novamente')
+      Swal.fire({
+        icon: 'error',
+        title: 'Putz!',
+        text: 'Sessão expirada! Faça login novamente para continuar.',
+      })
       this.router.navigate(['/entrar'])
     }
     this.findAllProdutos()
@@ -46,8 +47,6 @@ export class ProdutoComponent implements OnInit {
     this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
       this.listaProdutos = resp
     })
-
-    
   }
 
   cadastrar() {
@@ -64,7 +63,6 @@ export class ProdutoComponent implements OnInit {
       this.findAllProdutos()
       this.produto = new Produto()
     })
-
   }
 
   findByTemaCategoria() {

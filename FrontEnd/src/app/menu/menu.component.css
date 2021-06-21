@@ -3,6 +3,22 @@
   src: url(../../assets/fontes/caramella/Caramella_Regular.ttf)
 }
 
+a{
+  color: white;
+}
+
+a:hover{
+  color: #FF4500;
+}
+
+#temas{
+  color: black;
+}
+
+#temas:hover{
+  color:#FF4500;
+}
+
 .fs-14{
     font-size: 14pt;
     text-decoration: none;
@@ -10,25 +26,15 @@
 
   .navbar{
     font-family: "caramella";
-  }
-
-  
+  }  
 
   .menu{
     width: 100%;
-  }
-
-  
-
-  .hoover :hover {
-    background-color: orangered;
-  }
+  } 
 
   .hoover2 :hover {
     font-weight: bold;
   }
-
-
 
   input{
     border-radius: 25px;
@@ -36,5 +42,13 @@
   }
 
   button{
-    font-family: Texto;
+    font-family: "caramella";
+  }
+  
+  #dropdownMenuLink{
+    color: white;
+  }
+
+  #dropdownMenuLink:hover{
+    color: #FF4500;
   }

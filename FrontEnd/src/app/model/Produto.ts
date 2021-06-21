@@ -14,7 +14,6 @@ export class Produto {
     public estoque: number
     public categoria: Categoria
     public usuario: User
-
     public subTotal: number
     public quantidade: number
 }
