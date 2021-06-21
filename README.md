@@ -13,7 +13,7 @@
 
 
 <h2>Projeto</h2>
-Projeto integrador proposto pelo bootcamp Generation Brasil, cobrindo todo o aspecto de desenvolvimento de uma aplicação web. Para acessar ao nosso site, basta <a href="https://hw-tshirts.netlify.app/home ">clicar aqui</a>
+Projeto integrador proposto pelo bootcamp Generation Brasil, cobrindo todo o aspecto de desenvolvimento de uma aplicação web. Para acessar a documentação do projeto, basta <a href=" https://jezebel1990.github.io/doc-helloWorld/">clicar aqui</a>
 
 
 <h2>Visão resumida do Site</h2>
