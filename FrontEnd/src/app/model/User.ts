@@ -1,4 +1,5 @@
 import { Produto } from "./Produto"
+import { VerProduto } from "./VerProduto"
 
 export class User {
 
@@ -11,6 +12,9 @@ export class User {
     public endereco: string
     public tipo: string
 
-    public produto: Produto
+    public produto: Produto[]
+    public verproduto: VerProduto[]
+
+
 }
 

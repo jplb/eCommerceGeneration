@@ -15,6 +15,8 @@ export class VerProduto{
     public estoque: number
     public categoria: Categoria
     public user: User
+
     public quantidade: number
+
     public subTotal: number
 }
