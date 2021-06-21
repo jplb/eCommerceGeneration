@@ -1,7 +1,7 @@
 # eCommerceGeneration
 
 <h2>Status</h2>
-<a href=" https://hw-tshirts.netlify.app/home">✅Conheça nosso projeto na prática!✅</a> 
+<a href="https://hw-tshirts.netlify.app/home">✅Conheça nosso projeto na prática!✅</a> 
 
 </p>
 
