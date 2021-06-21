@@ -3,25 +3,24 @@
 <h2>Status</h2>
 <a href=" https://hw-tshirts.netlify.app/home " target="_blank">✅Conheça nosso projeto na prática!✅</a> 
 
-<p align="center">
-<a target="_blank" href="https://hw-tshirts.netlify.app/home ">
-  <img src="https://i.imgur.com/TP0Xj1r.jpg " alt="HW image"/>
-  </a>
 </p>
 
 <h4 align="center">A HelloWorld é uma marca digital fundada por um grupo que acredita no poder de transformação de vestir uma peça. Camisetas são uma potente ferramenta de auto expressão, onde é possível mostrar quem você é através da arte. Nossa missão é disseminar moda e expressão por todos os cantos! Dando visibilidade às mais diversas tribos, a todas as condições sociais. E é por isso que a HelloWorld tem como foco principal um projeto onde oferece impacto social que envolve clientes, equipe e comunidade.</h4>
 
+
+<a target="_blank" href="https://hw-tshirts.netlify.app/home ">
+<img src="https://i.imgur.com/TP0Xj1r.jpg " alt="HW image"/>
+</a>
 
 <h2>Projeto</h2>
 Projeto integrador proposto pelo bootcamp Generation Brasil, cobrindo todo o aspecto de desenvolvimento de uma aplicação web. Para acessar a documentação do projeto, basta <a href=" https://jezebel1990.github.io/doc-helloWorld/">clicar aqui</a>
 
 
 <h2>Visão resumida do Site</h2>
-
-<h6>Página de uma das categorias de camisetas</h6>
-<img alt="Categoria Frases" src="https://i.imgur.com/iq7QGB0.jpg"/>
-<h6>Página de pedido</h6>
-<img alt="Pedido" src="https://i.imgur.com/v0N0wdv.png"/>
+<h6>Página da categoria Frases</h6>
+  <img alt="Categoria Frases" src="https://i.imgur.com/iq7QGB0.jpg"/>
+  <h6>Página de Pedido</h6>
+  <img alt="Pedido" src="https://i.imgur.com/v0N0wdv.png"/>
 
 
 <h2>Funcionalidades da aplicação</h2>
