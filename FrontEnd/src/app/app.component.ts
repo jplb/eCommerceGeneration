@@ -7,15 +7,8 @@ import { AuthService } from './service/auth.service';
   styleUrls: ['./app.component.css']
 })
 
-
 export class AppComponent {
-
-  
-
   constructor (
-    public auth:AuthService // injeção de dependencia para poder usar os dados de logado dentro do html
+    public auth:AuthService // Injeção de dependência para poder usar os dados de logado dentro do html
   ){}
-  
-
-
 }

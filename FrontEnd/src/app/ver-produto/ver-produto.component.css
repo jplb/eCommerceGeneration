@@ -42,20 +42,16 @@
       background-color: #420366;
       width: 90%;
   }
+
+  h1{
+    color: #4F4F4F;
+    font-size: 70px;
+   }
   
   h2{
     font-size: 50px;
     color: #FF4500;
    }
-  
-   h1{
-    color: #4F4F4F;
-    font-size: 70px;
-   }
-  h5{
-    color:  #961475;
-    align-items: center;
-  }
   
    #quantidade{
     display: flex;
@@ -64,7 +60,7 @@
     background-color: white;
     border-radius:0px;
     max-width: 95px;
-    width: 30px;
+    width: 50px;
     height: 30px;
     display: flex;
     margin: 0px;
@@ -130,10 +126,36 @@
     padding-right: 20px;
   }
   
-  .hover{
-    text-decoration: none;
+  /* 4 colunas lado a lado */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove espaços extras entre colunas */
+.row {margin: 0 -5px;}
+
+/* Limpa floats após as colunas*/
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Estiliza os cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(119, 118, 118, 0.2); /* Adiciona efeito ao card */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+@media screen and (max-width: 900px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    column-count: 1;
   }
-  .hover:hover{
-    background-color: #346350;
-    text-decoration: none;
-  }
+}

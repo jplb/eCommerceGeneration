@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { User } from '../model/User';
 import { AuthService } from '../service/auth.service';
 
@@ -23,75 +24,71 @@ export class CadastrarComponent implements OnInit {
     private router: Router
   ) { }
 
-
   ngOnInit() {
-    window.scroll(0,0)
+    window.scroll(0, 0)
   }
 
-confirmSenha(event:any){
-  this.confirmarSenha = event.target.value
-}
+  confirmSenha(event: any) {
+    this.confirmarSenha = event.target.value
+  }
 
+  cadastrar() {
+    if (this.user.senha != this.confirmarSenha) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Oops...',
+        text: 'Senhas diferentes!'
+      })
+    } else {
+      this.authService.cadastrar(this.user).subscribe((resp: User) => {
+        this.user = resp
+        this.router.navigate(['/entrar'])
+        Swal.fire({
+          icon: 'success',
+          title: 'Protinho!',
+          text: 'Usuário cadastrado com sucesso!'
+        })
 
-
-cadastrar(){
-  if(this.user.senha != this.confirmarSenha){
-    alert('Senhas Diferentes!')
-  }else{
-    this.authService.cadastrar(this.user).subscribe((resp: User) =>{
-      this.user = resp
-      this.router.navigate(['/entrar'])
-      alert('Usuário cadastrado com sucesso!') 
-    
-  }, error => {
-    if(error.status == 400){
-      alert('Usuário já existe')
+      }, error => {
+        if (error.status == 400) {
+          Swal.fire({
+            icon: 'warning',
+            title: 'Oops...',
+            text: 'Email já cadastrado!'
+          })
+        }
+      })
     }
-  })
-      
   }
 
+  /* Validação de entrada  */
 
-}
-
-
-/* Validação de entrada  */
-
-validacao(condicao: boolean, event:any){
-  let valid = false;
-  if(condicao){
-    event.target.classList.remove("is-valid");
-    event.target.classList.add("is-invalid");
-  }else{
-    event.target.classList.remove("is-invalid");
-    event.target.classList.add("is-valid");
-    valid = true;
+  validacao(condicao: boolean, event: any) {
+    let valid = false;
+    if (condicao) {
+      event.target.classList.remove("is-valid");
+      event.target.classList.add("is-invalid");
+    } else {
+      event.target.classList.remove("is-invalid");
+      event.target.classList.add("is-valid");
+      valid = true;
+    }
+    return valid;
   }
-  return valid;
-}
 
-validaNome(event: any){
-  this.nomeValido = this.validacao(event.target.value.length < 3, event);
-  
-  
-}
+  validaNome(event: any) {
+    this.nomeValido = this.validacao(event.target.value.length < 3, event);
+  }
 
-validaEmail(event: any){
-  this.emailValido = this.validacao(event.target.value.indexOf('@') == -1 || event.target.value.indexOf('.') == -1, event)
-  
-}
+  validaEmail(event: any) {
+    this.emailValido = this.validacao(event.target.value.indexOf('@') == -1 || event.target.value.indexOf('.') == -1, event)
+  }
 
-validaSenha(event: any){
-  this.senhaValida = this.validacao(event.target.value.length < 6 || event.target.value.length > 20, event)
- 
-}
+  validaSenha(event: any) {
+    this.senhaValida = this.validacao(event.target.value.length < 6 || event.target.value.length > 20, event)
+  }
 
-confirmaSenhas(event: any){
-  this.senhasIguais = this.validacao(this.user.senha != this.confirmarSenha, event)
- 
-}
-
-
-
-
+  confirmaSenhas(event: any) {
+    this.senhasIguais = this.validacao(this.user.senha != this.confirmarSenha, event)
+  }
 }

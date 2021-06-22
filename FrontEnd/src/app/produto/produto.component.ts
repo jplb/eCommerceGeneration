@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { CategoriaService } from '../service/categoria.service';
@@ -22,18 +23,19 @@ export class ProdutoComponent implements OnInit {
   idCategoria: number
 
   constructor(
-
-
     private router: Router,
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService
-
   ) { }
 
   ngOnInit() {
 
     if (environment.token == '') {
-      alert('Sua sessão expirou! Faça login novamente')
+      Swal.fire({
+        icon: 'error',
+        title: 'Putz!',
+        text: 'Sessão expirada! Faça login novamente para continuar.',
+      })
       this.router.navigate(['/entrar'])
     }
     this.findAllProdutos()
@@ -45,8 +47,6 @@ export class ProdutoComponent implements OnInit {
     this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
       this.listaProdutos = resp
     })
-
-    
   }
 
   cadastrar() {
@@ -55,11 +55,14 @@ export class ProdutoComponent implements OnInit {
     console.log(this.produto)
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp
-      alert('Produto cadastrado com sucesso!')
+      Swal.fire({
+        icon: 'success',
+        title: 'Boa!',
+        text: 'Produto cadastrado com sucesso!',
+      })
       this.findAllProdutos()
       this.produto = new Produto()
     })
-
   }
 
   findByTemaCategoria() {

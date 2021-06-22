@@ -23,6 +23,7 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,4 +54,5 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+export class AppModule{}

@@ -16,21 +16,19 @@ import { MetodoPagamentoComponent } from './metodo-pagamento/metodo-pagamento.co
 import { BuscarComponent } from './buscar/buscar.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 
-
 const routes: Routes = [
-
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'entrar', component: EntrarComponent },
   { path: 'cadastrar', component: CadastrarComponent },
-  { path: 'ver-produto', component: VerProdutoComponent},
+  { path: 'ver-produto/:id', component: VerProdutoComponent},
   { path: 'vitrine', component: VitrineComponent},
   { path: 'produto', component: ProdutoComponent },
   { path: 'home', component: HomeComponent },
-  {path:'produto-edit/:id', component: ProdutoEditComponent},
-  {path:'produto-delete/:id', component: ProdutoDeleteComponent},
-  {path:'sobre-nos', component: SobreNosComponent},
-  {path:'designer',component: DesignerComponent},
-  {path:'categoria/:id', component: CategoriaComponent},
+  { path: 'produto-edit/:id', component: ProdutoEditComponent},
+  { path: 'produto-delete/:id', component: ProdutoDeleteComponent},
+  { path: 'sobre-nos', component: SobreNosComponent},
+  { path: 'designer',component: DesignerComponent},
+  { path: 'categoria/:id', component: CategoriaComponent},
   
   { path: 'produto-edit/:id', component: ProdutoEditComponent},
   { path: 'produto-delete/:id', component: ProdutoDeleteComponent},
@@ -45,4 +43,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
